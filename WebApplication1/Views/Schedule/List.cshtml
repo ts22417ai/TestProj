@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication1.t私廚可預訂時間>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fTID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fCID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f午餐)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f晚餐)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fTID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fCID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f日期)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f午餐)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f晚餐)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
