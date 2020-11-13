@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication1.t私廚>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fCID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fUID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f服務地區)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f私廚簡介)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fCID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fUID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f服務地區)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f私廚簡介)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
