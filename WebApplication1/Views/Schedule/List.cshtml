@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.f晚餐)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.fTID }) |
             @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Delete", "Delete","Schedule" ,new {  fTid=item.fTID }, new { OnClick = "return confirm('確定要刪除嗎?')" })
         </td>
     </tr>
 }

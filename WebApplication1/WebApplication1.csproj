@@ -134,6 +134,7 @@
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="Controllers\SearchResultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -252,6 +253,7 @@
     <Content Include="Views\Chef\Edit.cshtml" />
     <Content Include="Views\Schedule\List.cshtml" />
     <Content Include="Views\Schedule\Create.cshtml" />
+    <Content Include="Views\Schedule\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Account\" />
@@ -264,6 +266,7 @@
     <Folder Include="ViewModels\Product\" />
     <Folder Include="Views\Order\" />
     <Folder Include="Views\Product\" />
+    <Folder Include="Views\SearchResult\" />
     <Folder Include="Views\會員\" />
   </ItemGroup>
   <ItemGroup>
