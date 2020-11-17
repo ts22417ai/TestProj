@@ -50,7 +50,7 @@ namespace WebApplication1.Models.Common
                 return row;
             }
 
-            public static void SQLReader(string sSQL, SqlParameter[] sqlArgs, Action<SqlDataReader> action)
+            public static void SQLReader(string sSQL, List<SqlParameter> sqlArgs, Action<SqlDataReader> action)
             {
                 SqlConnection con = new SqlConnection(myDBConnectionString);
                 con.Open();
@@ -58,7 +58,7 @@ namespace WebApplication1.Models.Common
                 // 加入SQL 字串
                 SqlCommand cmd = new SqlCommand(sSQL, con);
                 // 加入SQL 參數
-                cmd.Parameters.AddRange(sqlArgs);
+                cmd.Parameters.AddRange(sqlArgs.ToArray());
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 // callback reader
@@ -66,7 +66,7 @@ namespace WebApplication1.Models.Common
 
                 reader.Close();
                 con.Close();
-            }
+            }           
         }
     }
 }
