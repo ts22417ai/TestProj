@@ -3,26 +3,45 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.ViewModels.Schedule;
 
 namespace WebApplication1.Controllers
 {
     public class ScheduleController : Controller
     {
         // GET: Schedule
+
         public ActionResult List(int fCid)
         {
 
-            var table = from t in (new Database1Entities()).t私廚可預訂時間
-                        where t.fCID == fCid
-                        select t;
+            var table = (from t in (new Database1Entities()).t私廚可預訂時間
+                        where t.fCID == fCid 
+                        select t).ToList();
 
-            List<t私廚可預訂時間> list = new List<t私廚可預訂時間>();
-            foreach (t私廚可預訂時間 t in table)
-            {
-                list.Add(t);
-            }
-            return View(list);
+            var listunable = new List<string>();
+            var listenable = new List<string>();
+            listunable.AddRange(table.Where(t => t.f午餐 == 1 )
+                .Select(x=>  x.f日期.ToString() + "-1").ToArray()
+                );
+            listunable.AddRange(table.Where(t => t.f晚餐 == 1)
+                .Select(x => x.f日期.ToString() + "-2").ToArray()
+                );
+            
+
+            listenable.AddRange(table.Where(t => t.f午餐 == 0)
+                .Select(x => x.f日期.ToString() + "-1").ToArray()
+                );
+            listenable.AddRange(table.Where(t => t.f晚餐 == 0)
+                .Select(x => x.f日期.ToString() + "-2").ToArray()
+                );
+
+
+
+            
+            return View();
         }
+
+        
 
         public ActionResult Create(int fCid)
         {
