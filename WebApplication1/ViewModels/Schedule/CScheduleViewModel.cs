@@ -7,10 +7,8 @@ namespace WebApplication1.ViewModels.Schedule
 {
     public class CScheduleViewModel
     {      
-        public int fTID { get; set; }
-        public int fCID { get; set; }
-        public string f日期 { get; set; }
-        public int f午餐 { get; set; }
-        public int f晚餐 { get; set; }        
+        public List<string> ArrEnable { get; set; }
+        public List<string> ArrUnable { get; set; }
+        public List<string> ArrGetData { get; set; }
     }
 }

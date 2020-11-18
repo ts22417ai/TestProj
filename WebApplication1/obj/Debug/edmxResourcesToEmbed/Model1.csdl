@@ -31,7 +31,7 @@
     </Key>
     <Property Name="fTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="fCID" Type="Int32" Nullable="false" />
-    <Property Name="f日期" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="f日期" Type="DateTime" Nullable="false" />
     <Property Name="f午餐" Type="Int32" Nullable="false" />
     <Property Name="f晚餐" Type="Int32" Nullable="false" />
     <NavigationProperty Name="t私廚" Relationship="Self.FK_t私廚可預訂時間_Tot私廚" FromRole="t私廚可預訂時間" ToRole="t私廚" />

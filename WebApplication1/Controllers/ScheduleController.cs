@@ -15,33 +15,33 @@ namespace WebApplication1.Controllers
         {
 
             var table = (from t in (new Database1Entities()).t私廚可預訂時間
-                        where t.fCID == fCid 
-                        select t).ToList();
+                         where t.fCID == fCid
+                         select t).ToList();
 
             var listunable = new List<string>();
             var listenable = new List<string>();
-            listunable.AddRange(table.Where(t => t.f午餐 == 1 )
-                .Select(x=>  x.f日期.ToString() + "-1").ToArray()
+
+            listunable.AddRange(table.Where(t => t.f午餐 == 1)
+                .Select(x => x.f日期.ToString("d") + "-1").ToArray()
                 );
             listunable.AddRange(table.Where(t => t.f晚餐 == 1)
-                .Select(x => x.f日期.ToString() + "-2").ToArray()
+                .Select(x => x.f日期.ToString("d") + "-2").ToArray()
                 );
-            
-
             listenable.AddRange(table.Where(t => t.f午餐 == 0)
-                .Select(x => x.f日期.ToString() + "-1").ToArray()
+                .Select(x => x.f日期.ToString("d") + "-1").ToArray()
                 );
             listenable.AddRange(table.Where(t => t.f晚餐 == 0)
-                .Select(x => x.f日期.ToString() + "-2").ToArray()
+                .Select(x => x.f日期.ToString("d") + "-2").ToArray()
                 );
 
-
-
-            
-            return View();
+            CScheduleViewModel ScheduleVM = new CScheduleViewModel();
+            ScheduleVM.ArrEnable = listenable;
+            ScheduleVM.ArrUnable = listunable;
+       
+            return View(ScheduleVM);
         }
 
-        
+
 
         public ActionResult Create(int fCid)
         {
@@ -63,7 +63,7 @@ namespace WebApplication1.Controllers
         {
             var db = (new Database1Entities());
             var time = db.t私廚可預訂時間.FirstOrDefault(t => t.fTID == id);
-            if(time == null)
+            if (time == null)
             {
                 return RedirectToAction("List");
             }
@@ -88,13 +88,13 @@ namespace WebApplication1.Controllers
         public ActionResult Delete(int fTid)
         {
             var db = (new Database1Entities());
-            var time = db.t私廚可預訂時間.FirstOrDefault(t=> t.fTID == fTid);
-            if(time != null)
+            var time = db.t私廚可預訂時間.FirstOrDefault(t => t.fTID == fTid);
+            if (time != null)
             {
                 db.t私廚可預訂時間.Remove(time);
                 db.SaveChanges();
             }
-            return RedirectToAction("List",new { fCid=time.fCID});
+            return RedirectToAction("List", new { fCid = time.fCID });
         }
     }
 }

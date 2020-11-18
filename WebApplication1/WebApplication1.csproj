@@ -256,6 +256,7 @@
     <Content Include="Views\Chef\Edit.cshtml" />
     <Content Include="Views\Schedule\Create.cshtml" />
     <Content Include="Views\Schedule\Edit.cshtml" />
+    <Content Include="Views\Schedule\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Account\" />
