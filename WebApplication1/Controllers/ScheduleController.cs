@@ -55,7 +55,7 @@ namespace WebApplication1.Controllers
         {
             var db = (new Database1Entities());
             var time = db.t私廚可預訂時間.FirstOrDefault(t => t.fTID == modify.fTID);
-            if (time == null)
+            if (time != null)
             {
                 time.f日期 = modify.f日期;
                 time.f晚餐 = modify.f晚餐;
@@ -63,7 +63,7 @@ namespace WebApplication1.Controllers
 
                 db.SaveChanges();
             }
-            return RedirectToAction("List");
+            return RedirectToAction("List", new { fCid = time.fCID });
         }
 
         public ActionResult Delete(int fTid)
