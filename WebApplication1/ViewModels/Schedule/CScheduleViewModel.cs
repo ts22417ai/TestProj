@@ -9,6 +9,7 @@ namespace WebApplication1.ViewModels.Schedule
     {      
         public List<string> ArrEnable { get; set; }
         public List<string> ArrUnable { get; set; }
-        public List<string> ArrGetData { get; set; }
+        public List<string> ArrGetNewTime { get; set; }
+        public List<string> ArrGetDeletedTime { get; set; }
     }
 }

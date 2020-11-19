@@ -16,9 +16,9 @@ namespace WebApplication1
     {
         public int fTID { get; set; }
         public int fCID { get; set; }
-        public DateTime f日期 { get; set; }
-        public int f午餐 { get; set; }
-        public int f晚餐 { get; set; }
+        public System.DateTime f日期 { get; set; }
+        public int f時段 { get; set; }
+        public int f狀態 { get; set; }
     
         public virtual t私廚 t私廚 { get; set; }
     }

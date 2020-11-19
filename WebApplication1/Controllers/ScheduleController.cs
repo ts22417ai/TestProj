@@ -21,23 +21,19 @@ namespace WebApplication1.Controllers
             var listunable = new List<string>();
             var listenable = new List<string>();
 
-            listunable.AddRange(table.Where(t => t.f午餐 == 1)
-                .Select(x => x.f日期.ToString("d") + "-1").ToArray()
+            listunable.AddRange(table.Where(t => t.f狀態 == 2)
+                .Select(x => x.f日期.ToString("d") + "-" + x.f時段.ToString()).ToList()
                 );
-            listunable.AddRange(table.Where(t => t.f晚餐 == 1)
-                .Select(x => x.f日期.ToString("d") + "-2").ToArray()
+
+            listenable.AddRange(table.Where(t => t.f狀態 == 1)
+                .Select(x => x.f日期.ToString("d") + "-" + x.f時段.ToString()).ToList()
                 );
-            listenable.AddRange(table.Where(t => t.f午餐 == 0)
-                .Select(x => x.f日期.ToString("d") + "-1").ToArray()
-                );
-            listenable.AddRange(table.Where(t => t.f晚餐 == 0)
-                .Select(x => x.f日期.ToString("d") + "-2").ToArray()
-                );
+
 
             CScheduleViewModel ScheduleVM = new CScheduleViewModel();
             ScheduleVM.ArrEnable = listenable;
             ScheduleVM.ArrUnable = listunable;
-       
+
             return View(ScheduleVM);
         }
 
@@ -45,56 +41,46 @@ namespace WebApplication1.Controllers
 
         public ActionResult Create(int fCid)
         {
-
             return View();
         }
+
         [HttpPost]
-        public ActionResult Create(t私廚可預訂時間 t)
+        public ActionResult Create(int FCID, CScheduleViewModel VM)
         {
-            using (var db = new Database1Entities())
+            foreach (string s in VM.ArrGetNewTime)
             {
+                string[] Arr = s.Split('-');
+                t私廚可預訂時間 t = new t私廚可預訂時間();
+                t.fCID = FCID;
+                t.f日期 = Convert.ToDateTime(Arr[0]);
+                t.f時段 = Convert.ToInt32(Arr[1]);
+                t.f狀態 = 1;
+
+                Database1Entities db = new Database1Entities();
                 db.t私廚可預訂時間.Add(t);
                 db.SaveChanges();
             }
-            return RedirectToAction("List", new { fCid = t.fCID });
+
+            return RedirectToAction("List", new { fCid = FCID });
         }
 
-        public ActionResult Edit(int id)
-        {
-            var db = (new Database1Entities());
-            var time = db.t私廚可預訂時間.FirstOrDefault(t => t.fTID == id);
-            if (time == null)
-            {
-                return RedirectToAction("List");
-            }
-            return View(time);
-        }
-        [HttpPost]
-        public ActionResult Edit(t私廚可預訂時間 modify)
-        {
-            var db = (new Database1Entities());
-            var time = db.t私廚可預訂時間.FirstOrDefault(t => t.fTID == modify.fTID);
-            if (time != null)
-            {
-                time.f日期 = modify.f日期;
-                time.f晚餐 = modify.f晚餐;
-                time.f午餐 = modify.f午餐;
 
-                db.SaveChanges();
-            }
-            return RedirectToAction("List", new { fCid = time.fCID });
-        }
 
-        public ActionResult Delete(int fTid)
+        public ActionResult Delete(int FCID, CScheduleViewModel VM)
         {
-            var db = (new Database1Entities());
-            var time = db.t私廚可預訂時間.FirstOrDefault(t => t.fTID == fTid);
-            if (time != null)
+            foreach (string s in VM.ArrGetDeletedTime)
             {
-                db.t私廚可預訂時間.Remove(time);
-                db.SaveChanges();
+                string[] Arr = s.Split('-');
+
+                Database1Entities db = new Database1Entities();
+                var deleteTime = db.t私廚可預訂時間.FirstOrDefault(t => t.f日期 == Convert.ToDateTime(Arr[0]) && t.f時段 == Convert.ToInt32(Arr[0]));
+                if (deleteTime != null)
+                {
+                    db.t私廚可預訂時間.Remove(deleteTime);
+                    db.SaveChanges();
+                }
             }
-            return RedirectToAction("List", new { fCid = time.fCID });
+            return RedirectToAction("List", new { fCid = FCID });
         }
     }
 }

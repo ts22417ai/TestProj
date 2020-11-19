@@ -27,7 +27,6 @@ namespace WebApplication1
     
         public virtual DbSet<t我的最愛> t我的最愛 { get; set; }
         public virtual DbSet<t私廚> t私廚 { get; set; }
-        public virtual DbSet<t私廚可預訂時間> t私廚可預訂時間 { get; set; }
         public virtual DbSet<t服務種類> t服務種類 { get; set; }
         public virtual DbSet<t訂單> t訂單 { get; set; }
         public virtual DbSet<t風格> t風格 { get; set; }
@@ -35,5 +34,6 @@ namespace WebApplication1
         public virtual DbSet<t菜品> t菜品 { get; set; }
         public virtual DbSet<t會員> t會員 { get; set; }
         public virtual DbSet<t儲值點數> t儲值點數 { get; set; }
+        public virtual DbSet<t私廚可預訂時間> t私廚可預訂時間 { get; set; }
     }
 }

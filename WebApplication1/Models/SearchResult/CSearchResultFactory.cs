@@ -17,7 +17,7 @@ namespace WebApplication1.Models.SearchResult
                 "inner join t風格 as s on s.fSID = p.fSID)" +
                 "inner join t服務種類 as k on k.fKID = p.fKID)" +
                 "where s.f風格 = @風格 and k.f服務種類 = @服務種類 and c.f服務地區 = @地區 " +
-                $"and t.f日期 = @日期 and [{時段}] = 2; ";
+                $"and t.f日期 = @日期 and [{時段}] = 1; ";
             DateTime D日期 = Convert.ToDateTime(日期);
             List<SqlParameter> paraList = new List<SqlParameter>();
             if (風格 != null && 地區 != null && 服務種類 != null && 日期 != null && 時段 != null)

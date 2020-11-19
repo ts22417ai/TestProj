@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="t我的最愛">
           <Key>
             <PropertyRef Name="fFID" />
@@ -32,8 +32,8 @@
           <Property Name="fTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="fCID" Type="int" Nullable="false" />
           <Property Name="f日期" Type="date" Nullable="false" />
-          <Property Name="f午餐" Type="int" Nullable="false" />
-          <Property Name="f晚餐" Type="int" Nullable="false" />
+          <Property Name="f時段" Type="int" Nullable="false" />
+          <Property Name="f狀態" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="t服務種類">
           <Key>
@@ -304,8 +304,7 @@
             <End Role="t儲值點數" EntitySet="t儲值點數" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -331,19 +330,8 @@
           <Property Name="f風格" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="f服務種類" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="t會員" Relationship="Self.FK_t私廚_Tot會員" FromRole="t私廚" ToRole="t會員" />
-          <NavigationProperty Name="t私廚可預訂時間" Relationship="Self.FK_t私廚可預訂時間_Tot私廚" FromRole="t私廚" ToRole="t私廚可預訂時間" />
           <NavigationProperty Name="t販售項目" Relationship="Self.FK_t販售項目_Tot私廚" FromRole="t私廚" ToRole="t販售項目" />
-        </EntityType>
-        <EntityType Name="t私廚可預訂時間">
-          <Key>
-            <PropertyRef Name="fTID" />
-          </Key>
-          <Property Name="fTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fCID" Type="Int32" Nullable="false" />
-          <Property Name="f日期" Type="DateTime" Nullable="false" />
-          <Property Name="f午餐" Type="Int32" Nullable="false" />
-          <Property Name="f晚餐" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="t私廚" Relationship="Self.FK_t私廚可預訂時間_Tot私廚" FromRole="t私廚可預訂時間" ToRole="t私廚" />
+          <NavigationProperty Name="t私廚可預訂時間" Relationship="Database1Model.FK_t私廚可預訂時間_Tot私廚" FromRole="t私廚" ToRole="t私廚可預訂時間" />
         </EntityType>
         <EntityType Name="t服務種類">
           <Key>
@@ -478,18 +466,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_t私廚可預訂時間_Tot私廚">
-          <End Role="t私廚" Type="Self.t私廚" Multiplicity="1" />
-          <End Role="t私廚可預訂時間" Type="Self.t私廚可預訂時間" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="t私廚">
-              <PropertyRef Name="fCID" />
-            </Principal>
-            <Dependent Role="t私廚可預訂時間">
-              <PropertyRef Name="fCID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_t販售項目_Tot私廚">
           <End Role="t私廚" Type="Self.t私廚" Multiplicity="1" />
           <End Role="t販售項目" Type="Self.t販售項目" Multiplicity="*" />
@@ -577,7 +553,6 @@
         <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="t我的最愛" EntityType="Self.t我的最愛" />
           <EntitySet Name="t私廚" EntityType="Self.t私廚" />
-          <EntitySet Name="t私廚可預訂時間" EntityType="Self.t私廚可預訂時間" />
           <EntitySet Name="t服務種類" EntityType="Self.t服務種類" />
           <EntitySet Name="t訂單" EntityType="Self.t訂單" />
           <EntitySet Name="t風格" EntityType="Self.t風格" />
@@ -596,10 +571,6 @@
           <AssociationSet Name="FK_t私廚_Tot會員" Association="Self.FK_t私廚_Tot會員">
             <End Role="t會員" EntitySet="t會員" />
             <End Role="t私廚" EntitySet="t私廚" />
-          </AssociationSet>
-          <AssociationSet Name="FK_t私廚可預訂時間_Tot私廚" Association="Self.FK_t私廚可預訂時間_Tot私廚">
-            <End Role="t私廚" EntitySet="t私廚" />
-            <End Role="t私廚可預訂時間" EntitySet="t私廚可預訂時間" />
           </AssociationSet>
           <AssociationSet Name="FK_t販售項目_Tot私廚" Association="Self.FK_t販售項目_Tot私廚">
             <End Role="t私廚" EntitySet="t私廚" />
@@ -629,7 +600,35 @@
             <End Role="t會員" EntitySet="t會員" />
             <End Role="t儲值點數" EntitySet="t儲值點數" />
           </AssociationSet>
+          <EntitySet Name="t私廚可預訂時間" EntityType="Database1Model.t私廚可預訂時間" />
+          <AssociationSet Name="FK_t私廚可預訂時間_Tot私廚" Association="Database1Model.FK_t私廚可預訂時間_Tot私廚">
+            <End Role="t私廚" EntitySet="t私廚" />
+            <End Role="t私廚可預訂時間" EntitySet="t私廚可預訂時間" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="t私廚可預訂時間">
+          <Key>
+            <PropertyRef Name="fTID" />
+          </Key>
+          <Property Name="fTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fCID" Type="Int32" Nullable="false" />
+          <Property Name="f日期" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="f時段" Type="Int32" Nullable="false" />
+          <Property Name="f狀態" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="t私廚" Relationship="Database1Model.FK_t私廚可預訂時間_Tot私廚" FromRole="t私廚可預訂時間" ToRole="t私廚" />
+        </EntityType>
+        <Association Name="FK_t私廚可預訂時間_Tot私廚">
+          <End Type="Database1Model.t私廚" Role="t私廚" Multiplicity="1" />
+          <End Type="Database1Model.t私廚可預訂時間" Role="t私廚可預訂時間" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="t私廚">
+              <PropertyRef Name="fCID" />
+            </Principal>
+            <Dependent Role="t私廚可預訂時間">
+              <PropertyRef Name="fCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -655,17 +654,6 @@
                 <ScalarProperty Name="f私廚評級" ColumnName="f私廚評級" />
                 <ScalarProperty Name="f風格" ColumnName="f風格" />
                 <ScalarProperty Name="f服務種類" ColumnName="f服務種類" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="t私廚可預訂時間">
-            <EntityTypeMapping TypeName="Database1Model.t私廚可預訂時間">
-              <MappingFragment StoreEntitySet="t私廚可預訂時間">
-                <ScalarProperty Name="fTID" ColumnName="fTID" />
-                <ScalarProperty Name="fCID" ColumnName="fCID" />
-                <ScalarProperty Name="f日期" ColumnName="f日期" />
-                <ScalarProperty Name="f午餐" ColumnName="f午餐" />
-                <ScalarProperty Name="f晚餐" ColumnName="f晚餐" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -754,6 +742,17 @@
                 <ScalarProperty Name="fUID" ColumnName="fUID" />
                 <ScalarProperty Name="f點數" ColumnName="f點數" />
                 <ScalarProperty Name="f建立時間" ColumnName="f建立時間" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t私廚可預訂時間">
+            <EntityTypeMapping TypeName="Database1Model.t私廚可預訂時間">
+              <MappingFragment StoreEntitySet="t私廚可預訂時間">
+                <ScalarProperty Name="f狀態" ColumnName="f狀態" />
+                <ScalarProperty Name="f時段" ColumnName="f時段" />
+                <ScalarProperty Name="f日期" ColumnName="f日期" />
+                <ScalarProperty Name="fCID" ColumnName="fCID" />
+                <ScalarProperty Name="fTID" ColumnName="fTID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
