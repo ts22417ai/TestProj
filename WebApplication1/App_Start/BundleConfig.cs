@@ -25,6 +25,20 @@ namespace WebApplication1
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            // Fontend
+            bundles.Add(new ScriptBundle("~/bundles/FontendJS").Include(
+                        // <!-- jQuery-2.2.4 js -->
+                        "~/Scripts/Frontend/jquery-2.2.4.min.js", 
+                        // <!-- Popper js -->
+                        "~/Scripts/Frontend/popper.min.js",
+                        // <!-- Bootstrap js -->
+                        "~/Scripts/Frontend/bootstrap.min.js",
+                        // <!-- All Plugins js -->
+                        "~/Scripts/Frontend/plugins.js",
+                        // <!-- Active js -->
+                        "~/Scripts/Frontend/active.js"));
+
         }
     }
 }

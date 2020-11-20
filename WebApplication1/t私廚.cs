@@ -25,7 +25,7 @@ namespace WebApplication1
         public int fUID { get; set; }
         public string f服務地區 { get; set; }
         public string f私廚簡介 { get; set; }
-        public int f私廚評級 { get; set; }
+        public Nullable<int> f私廚評級 { get; set; }
         public string f風格 { get; set; }
         public string f服務種類 { get; set; }
     

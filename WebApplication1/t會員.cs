@@ -19,8 +19,8 @@ namespace WebApplication1
         {
             this.t我的最愛 = new HashSet<t我的最愛>();
             this.t私廚 = new HashSet<t私廚>();
-            this.t訂單 = new HashSet<t訂單>();
             this.t儲值點數 = new HashSet<t儲值點數>();
+            this.t訂單 = new HashSet<t訂單>();
         }
     
         public int fUID { get; set; }
@@ -34,16 +34,16 @@ namespace WebApplication1
         public string f詳細地址 { get; set; }
         public string f居住縣市 { get; set; }
         public string f會員照片 { get; set; }
-        public int f點數 { get; set; }
-        public int f權限 { get; set; }
+        public Nullable<int> f點數 { get; set; }
+        public Nullable<int> f權限 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<t我的最愛> t我的最愛 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<t私廚> t私廚 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t訂單> t訂單 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<t儲值點數> t儲值點數 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<t訂單> t訂單 { get; set; }
     }
 }

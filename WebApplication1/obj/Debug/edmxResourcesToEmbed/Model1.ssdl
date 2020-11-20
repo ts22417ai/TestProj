@@ -14,11 +14,11 @@
     </Key>
     <Property Name="fCID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fUID" Type="int" Nullable="false" />
-    <Property Name="f服務地區" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="f私廚簡介" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="f私廚評級" Type="int" Nullable="false" />
-    <Property Name="f風格" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="f服務種類" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="f服務地區" Type="nvarchar" MaxLength="20" />
+    <Property Name="f私廚簡介" Type="nvarchar(max)" />
+    <Property Name="f私廚評級" Type="int" />
+    <Property Name="f風格" Type="nvarchar" MaxLength="50" />
+    <Property Name="f服務種類" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="t私廚可預訂時間">
     <Key>
@@ -27,8 +27,8 @@
     <Property Name="fTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fCID" Type="int" Nullable="false" />
     <Property Name="f日期" Type="date" Nullable="false" />
-    <Property Name="f午餐" Type="int" Nullable="false" />
-    <Property Name="f晚餐" Type="int" Nullable="false" />
+    <Property Name="f時段" Type="int" Nullable="false" />
+    <Property Name="f狀態" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="t服務種類">
     <Key>
@@ -41,12 +41,12 @@
     <Key>
       <PropertyRef Name="fOID" />
     </Key>
-    <Property Name="fOID" Type="int" Nullable="false" />
+    <Property Name="fOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fUID" Type="int" Nullable="false" />
     <Property Name="fPID" Type="int" Nullable="false" />
     <Property Name="f訂購日期" Type="datetime" Nullable="false" />
     <Property Name="f預定日期" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="f完成日期" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="f評價日期" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="f數量" Type="int" Nullable="false" />
     <Property Name="f總價" Type="int" Nullable="false" />
     <Property Name="f狀態" Type="int" Nullable="false" />
@@ -79,8 +79,9 @@
     <Key>
       <PropertyRef Name="fVID" />
     </Key>
-    <Property Name="fVID" Type="int" Nullable="false" />
+    <Property Name="fVID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fPID" Type="int" Nullable="false" />
+    <Property Name="f菜品名稱" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="f菜品簡介" Type="nvarchar(max)" Nullable="false" />
     <Property Name="f菜品照片" Type="nvarchar" MaxLength="255" Nullable="false" />
   </EntityType>
@@ -92,15 +93,15 @@
     <Property Name="f帳號" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="f密碼" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="f電子郵件" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="f姓名" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="f暱稱" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="f電話" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="f生日" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="f詳細地址" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="f居住縣市" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="f會員照片" Type="nvarchar" MaxLength="255" Nullable="false" />
-    <Property Name="f點數" Type="int" Nullable="false" />
-    <Property Name="f權限" Type="int" Nullable="false" />
+    <Property Name="f姓名" Type="nvarchar" MaxLength="20" />
+    <Property Name="f暱稱" Type="nvarchar" MaxLength="20" />
+    <Property Name="f電話" Type="nvarchar" MaxLength="10" />
+    <Property Name="f生日" Type="nvarchar" MaxLength="10" />
+    <Property Name="f詳細地址" Type="nvarchar" MaxLength="50" />
+    <Property Name="f居住縣市" Type="nvarchar" MaxLength="20" />
+    <Property Name="f會員照片" Type="nvarchar" MaxLength="255" />
+    <Property Name="f點數" Type="int" />
+    <Property Name="f權限" Type="int" />
   </EntityType>
   <EntityType Name="t儲值點數">
     <Key>

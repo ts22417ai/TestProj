@@ -1,0 +1,87 @@
+﻿@model IEnumerable<WebApplication1.t販售項目>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fPID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fCID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fSID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fKID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f項目名稱)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f項目內容)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f價格)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f項目照片)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f項目評級_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f上架)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fPID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fCID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fSID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fKID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f項目名稱)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f項目內容)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f價格)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f項目照片)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f項目評級_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f上架)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { fPID = item.fPID  }) |
+            @Html.ActionLink("Details", "Details", new { fPID = item.fPID  }) |
+            @Html.ActionLink("Delete", "Delete", new { fPID = item.fPID })
+        </td>
+    </tr>
+}
+
+</table>

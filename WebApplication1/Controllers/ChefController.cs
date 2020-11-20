@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.ViewModels.Account;
 
 namespace WebApplication1.Controllers
 {
     public class ChefController : Controller
     {
         // GET: Chef
+        Database1Entities db = new Database1Entities();
         public ActionResult List()
         {
             var table = (new Database1Entities()).t私廚.Select(c => c);
@@ -41,7 +43,13 @@ namespace WebApplication1.Controllers
                 db.SaveChanges();
             }
 
-            return RedirectToAction("List");
+            var acc = db.t會員.FirstOrDefault(a => a.fUID == c.fUID);
+            if (acc != null)
+            {
+                acc.f權限 = 2; // 不顯示
+                db.SaveChanges();
+            }
+            return RedirectToAction("Details", "Account", new { fUID =c.fUID});
         }
 
         public ActionResult Edit(int fCID)
@@ -71,16 +79,26 @@ namespace WebApplication1.Controllers
             return RedirectToAction("List");
         }
 
-        public ActionResult Delete(int fCID)
+        public ActionResult Delete(t私廚 cc)
         {
+            
+            var acc = db.t會員.FirstOrDefault(a => a.fUID == cc.fUID);
+            if (acc != null)
+            {
+                acc.f權限 = 0; // 不顯示
+                db.SaveChanges();
+            }
 
-            var db = new Database1Entities();
-            var chef = db.t私廚.FirstOrDefault(c => c.fCID == fCID);
+
+            var chef = db.t私廚.FirstOrDefault(c => c.fCID == cc.fCID);
             if (chef != null)
             {
                 db.t私廚.Remove(chef);
                 db.SaveChanges();
             }
+
+
+
             return RedirectToAction("List");
         }
     }

@@ -41,46 +41,58 @@ namespace WebApplication1.Controllers
 
         public ActionResult Create(int fCid)
         {
-            return View();
+            return View(new CScheduleViewModel { fCid = fCid });
         }
 
         [HttpPost]
-        public ActionResult Create(int FCID, CScheduleViewModel VM)
+        public ActionResult Create(int fCid, CScheduleViewModel VM)
         {
-            foreach (string s in VM.ArrGetNewTime)
+            //新增可預訂時間
+            string sCreate = VM.ArrGetNewTime;
+            if (!string.IsNullOrEmpty(sCreate)) { 
+            string[] ArrSplit = sCreate.Split(',');
+            Database1Entities dbCreate = new Database1Entities();
+
+            foreach (string s1 in ArrSplit)
             {
-                string[] Arr = s.Split('-');
+                string[] Arr = s1.Split('-');
                 t私廚可預訂時間 t = new t私廚可預訂時間();
-                t.fCID = FCID;
+                t.fCID = fCid;
                 t.f日期 = Convert.ToDateTime(Arr[0]);
                 t.f時段 = Convert.ToInt32(Arr[1]);
                 t.f狀態 = 1;
-
-                Database1Entities db = new Database1Entities();
-                db.t私廚可預訂時間.Add(t);
-                db.SaveChanges();
+                dbCreate.t私廚可預訂時間.Add(t);
+            }
+            
+            dbCreate.SaveChanges();
+            return RedirectToAction("List", new { fCid = fCid });
             }
 
-            return RedirectToAction("List", new { fCid = FCID });
-        }
-
-
-
-        public ActionResult Delete(int FCID, CScheduleViewModel VM)
-        {
-            foreach (string s in VM.ArrGetDeletedTime)
+            //刪除不可預定時間
+            string sDelete = VM.ArrGetDeletedTime;
+            string[] ArrSplitDelete = sDelete.Split(',');
+            Database1Entities dbDelete = new Database1Entities();
+            if (!string.IsNullOrEmpty(sDelete)) { 
+            foreach (string s in ArrSplitDelete)
             {
                 string[] Arr = s.Split('-');
-
-                Database1Entities db = new Database1Entities();
-                var deleteTime = db.t私廚可預訂時間.FirstOrDefault(t => t.f日期 == Convert.ToDateTime(Arr[0]) && t.f時段 == Convert.ToInt32(Arr[0]));
+                DateTime time = Convert.ToDateTime(Arr[0]);
+                int status = Convert.ToInt32(Arr[1]);
+                var deleteTime = dbDelete.t私廚可預訂時間.FirstOrDefault(t => t.f日期 == time && t.f時段 == status);
                 if (deleteTime != null)
                 {
-                    db.t私廚可預訂時間.Remove(deleteTime);
-                    db.SaveChanges();
+                    dbDelete.t私廚可預訂時間.Remove(deleteTime);
+
                 }
             }
-            return RedirectToAction("List", new { fCid = FCID });
+            dbDelete.SaveChanges();
+
+            }
+            return RedirectToAction("List", new { fCid = fCid });
         }
+
+
+
+        
     }
 }

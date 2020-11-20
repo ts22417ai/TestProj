@@ -9,9 +9,12 @@ namespace WebApplication1.Controllers
     public class ProductController : Controller
     {
         // GET: Product
-        public ActionResult List(int fCID)
+
+        private Database1Entities db = new Database1Entities();
+
+        public ActionResult List()
         {
-            var table = (new Database1Entities()).t販售項目.Select(p => p.fCID == fCID);
+            var table = db.t販售項目.Select(p => p);
             var list = table.ToList();
 
             return View(list);
@@ -19,7 +22,27 @@ namespace WebApplication1.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            // @Html.DropDownListFor(x => x.fSID, Model.style)
+            // https://stackoverflow.com/questions/12985088/binding-dropdownlist-into-mvc-view
+
+            var selectListStyle = db.t風格.Select(s =>
+                new SelectListItem {
+                    Text = s.f風格,
+                    Value = s.fSID.ToString()
+                }).ToList();
+            var selectListKind = db.t服務種類.Select(k => 
+                new SelectListItem {
+                    Text = k.f服務種類,
+                    Value = k.fKID.ToString()
+                }).ToList();
+
+            var productCreateVM = new ViewModels.Product.ProductCreateVM
+            {
+                style = selectListStyle,
+                kind = selectListKind
+            };
+
+            return View(productCreateVM);
         }
 
         [HttpPost]
@@ -35,7 +58,6 @@ namespace WebApplication1.Controllers
 
         public ActionResult Edit(int fPID)
         {
-            var db = new Database1Entities();
             var prod = db.t販售項目.FirstOrDefault(p => p.fPID == fPID);
 
             return View(prod);
@@ -44,7 +66,6 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult Edit(t販售項目 modify)
         {
-            var db = new Database1Entities();
             var prod = db.t販售項目.FirstOrDefault(p => p.fPID == modify.fPID);
 
             if (prod != null)
@@ -68,7 +89,6 @@ namespace WebApplication1.Controllers
         public ActionResult Delete(int fPID)
         {
 
-            var db = new Database1Entities();
             var prod = db.t販售項目.FirstOrDefault(p => p.fPID == fPID);
             if (prod != null)
             {
@@ -77,5 +97,26 @@ namespace WebApplication1.Controllers
             }
             return RedirectToAction("List");
         }
+
+
+        public ActionResult ListFromtChef (int fCID)
+        {
+            var table = db.t販售項目.Where(p => p.fCID == fCID);
+            var list = table.ToList();
+
+            return View(list);
+        }
+
+        public ActionResult 私廚可預訂時間(int fCID)
+        {
+            var table = db.t私廚可預訂時間.Select(t => t);
+            var list = table.ToList();
+
+            return View(list);
+        }
+
+
     }
+
+
 }

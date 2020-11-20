@@ -19,7 +19,7 @@ namespace WebApplication1
         public int fPID { get; set; }
         public System.DateTime f訂購日期 { get; set; }
         public string f預定日期 { get; set; }
-        public string f完成日期 { get; set; }
+        public string f評價日期 { get; set; }
         public int f數量 { get; set; }
         public int f總價 { get; set; }
         public int f狀態 { get; set; }

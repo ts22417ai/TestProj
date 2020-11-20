@@ -1,0 +1,90 @@
+﻿@model IEnumerable<WebApplication1.t訂單>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.fUID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fPID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f訂購日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f預定日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f完成日期)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f數量)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f總價)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f狀態)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f評級)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f評價內容)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.fUID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fPID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f訂購日期)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f預定日期)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f完成日期)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f數量)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f總價)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f狀態)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f評級)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f評價內容)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { fOID=item.fOID}) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { fOID = item.fOID })
+        </td>
+    </tr>
+}
+
+</table>

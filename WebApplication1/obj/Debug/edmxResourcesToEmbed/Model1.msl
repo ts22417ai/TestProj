@@ -23,39 +23,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="t私廚可預訂時間">
-      <EntityTypeMapping TypeName="Database1Model.t私廚可預訂時間">
-        <MappingFragment StoreEntitySet="t私廚可預訂時間">
-          <ScalarProperty Name="fTID" ColumnName="fTID" />
-          <ScalarProperty Name="fCID" ColumnName="fCID" />
-          <ScalarProperty Name="f日期" ColumnName="f日期" />
-          <ScalarProperty Name="f午餐" ColumnName="f午餐" />
-          <ScalarProperty Name="f晚餐" ColumnName="f晚餐" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="t服務種類">
       <EntityTypeMapping TypeName="Database1Model.t服務種類">
         <MappingFragment StoreEntitySet="t服務種類">
           <ScalarProperty Name="fKID" ColumnName="fKID" />
           <ScalarProperty Name="f服務種類" ColumnName="f服務種類" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="t訂單">
-      <EntityTypeMapping TypeName="Database1Model.t訂單">
-        <MappingFragment StoreEntitySet="t訂單">
-          <ScalarProperty Name="fOID" ColumnName="fOID" />
-          <ScalarProperty Name="fUID" ColumnName="fUID" />
-          <ScalarProperty Name="fPID" ColumnName="fPID" />
-          <ScalarProperty Name="f訂購日期" ColumnName="f訂購日期" />
-          <ScalarProperty Name="f預定日期" ColumnName="f預定日期" />
-          <ScalarProperty Name="f完成日期" ColumnName="f完成日期" />
-          <ScalarProperty Name="f數量" ColumnName="f數量" />
-          <ScalarProperty Name="f總價" ColumnName="f總價" />
-          <ScalarProperty Name="f狀態" ColumnName="f狀態" />
-          <ScalarProperty Name="f評級" ColumnName="f評級" />
-          <ScalarProperty Name="f評價內容" ColumnName="f評價內容" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -88,6 +60,7 @@
         <MappingFragment StoreEntitySet="t菜品">
           <ScalarProperty Name="fVID" ColumnName="fVID" />
           <ScalarProperty Name="fPID" ColumnName="fPID" />
+          <ScalarProperty Name="f菜品名稱" ColumnName="f菜品名稱" />
           <ScalarProperty Name="f菜品簡介" ColumnName="f菜品簡介" />
           <ScalarProperty Name="f菜品照片" ColumnName="f菜品照片" />
         </MappingFragment>
@@ -119,6 +92,34 @@
           <ScalarProperty Name="fUID" ColumnName="fUID" />
           <ScalarProperty Name="f點數" ColumnName="f點數" />
           <ScalarProperty Name="f建立時間" ColumnName="f建立時間" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t私廚可預訂時間">
+      <EntityTypeMapping TypeName="Database1Model.t私廚可預訂時間">
+        <MappingFragment StoreEntitySet="t私廚可預訂時間">
+          <ScalarProperty Name="f狀態" ColumnName="f狀態" />
+          <ScalarProperty Name="f時段" ColumnName="f時段" />
+          <ScalarProperty Name="f日期" ColumnName="f日期" />
+          <ScalarProperty Name="fCID" ColumnName="fCID" />
+          <ScalarProperty Name="fTID" ColumnName="fTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t訂單">
+      <EntityTypeMapping TypeName="Database1Model.t訂單">
+        <MappingFragment StoreEntitySet="t訂單">
+          <ScalarProperty Name="f評價內容" ColumnName="f評價內容" />
+          <ScalarProperty Name="f評級" ColumnName="f評級" />
+          <ScalarProperty Name="f狀態" ColumnName="f狀態" />
+          <ScalarProperty Name="f總價" ColumnName="f總價" />
+          <ScalarProperty Name="f數量" ColumnName="f數量" />
+          <ScalarProperty Name="f評價日期" ColumnName="f評價日期" />
+          <ScalarProperty Name="f預定日期" ColumnName="f預定日期" />
+          <ScalarProperty Name="f訂購日期" ColumnName="f訂購日期" />
+          <ScalarProperty Name="fPID" ColumnName="fPID" />
+          <ScalarProperty Name="fUID" ColumnName="fUID" />
+          <ScalarProperty Name="fOID" ColumnName="fOID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

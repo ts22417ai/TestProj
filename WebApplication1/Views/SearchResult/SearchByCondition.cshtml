@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebApplication1.Models.SearchResult.CSearchResult>
+
+@{
+    ViewBag.Title = "SearchByCondition";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>SearchByCondition</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.f項目名稱)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f私廚姓名)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f項目照片)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f價格)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f項目評級)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f風格)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f服務種類)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.f項目名稱)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f私廚姓名)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f項目照片)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f價格)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f項目評級)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f風格)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f服務種類)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.fCID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.fCID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.fCID })
+        </td>
+    </tr>
+}
+
+</table>

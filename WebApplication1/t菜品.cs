@@ -16,6 +16,7 @@ namespace WebApplication1
     {
         public int fVID { get; set; }
         public int fPID { get; set; }
+        public string f菜品名稱 { get; set; }
         public string f菜品簡介 { get; set; }
         public string f菜品照片 { get; set; }
     
