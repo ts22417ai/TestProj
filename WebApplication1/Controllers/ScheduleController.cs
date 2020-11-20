@@ -89,10 +89,6 @@ namespace WebApplication1.Controllers
 
             }
             return RedirectToAction("List", new { fCid = fCid });
-        }
-
-
-
-        
+        }       
     }
 }
