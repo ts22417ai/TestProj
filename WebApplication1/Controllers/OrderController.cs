@@ -11,10 +11,28 @@ namespace WebApplication1.Controllers
         // GET: Order
         private Database1Entities db = new Database1Entities();
 
-        public ActionResult buyPointCreate()
+        public ActionResult buyPoint()
         {
             return View();
         }
+
+
+        public ActionResult buyPointSuccess()
+        {
+            return View();
+        }
+
+        public ActionResult chefInfo()
+        {
+            return View();
+        }
+
+        public ActionResult clientInfo()
+        {
+            return View();
+        }
+
+
 
 
         public ActionResult List()

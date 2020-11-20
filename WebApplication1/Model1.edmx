@@ -552,11 +552,11 @@
             <End Role="t儲值點數" EntitySet="t儲值點數" />
           </AssociationSet>
           <EntitySet Name="t私廚可預訂時間" EntityType="Database1Model.t私廚可預訂時間" />
+          <EntitySet Name="t訂單" EntityType="Database1Model.t訂單" />
           <AssociationSet Name="FK_t私廚可預訂時間_Tot私廚" Association="Database1Model.FK_t私廚可預訂時間_Tot私廚">
             <End Role="t私廚" EntitySet="t私廚" />
             <End Role="t私廚可預訂時間" EntitySet="t私廚可預訂時間" />
           </AssociationSet>
-          <EntitySet Name="t訂單" EntityType="Database1Model.t訂單" />
           <AssociationSet Name="FK_t訂單_Tot販售項目" Association="Database1Model.FK_t訂單_Tot販售項目">
             <End Role="t販售項目" EntitySet="t販售項目" />
             <End Role="t訂單" EntitySet="t訂單" />
@@ -577,18 +577,6 @@
           <Property Name="f狀態" Type="Int32" Nullable="false" />
           <NavigationProperty Name="t私廚" Relationship="Database1Model.FK_t私廚可預訂時間_Tot私廚" FromRole="t私廚可預訂時間" ToRole="t私廚" />
         </EntityType>
-        <Association Name="FK_t私廚可預訂時間_Tot私廚">
-          <End Type="Database1Model.t私廚" Role="t私廚" Multiplicity="1" />
-          <End Type="Database1Model.t私廚可預訂時間" Role="t私廚可預訂時間" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="t私廚">
-              <PropertyRef Name="fCID" />
-            </Principal>
-            <Dependent Role="t私廚可預訂時間">
-              <PropertyRef Name="fCID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="t訂單">
           <Key>
             <PropertyRef Name="fOID" />
@@ -607,6 +595,18 @@
           <NavigationProperty Name="t販售項目" Relationship="Database1Model.FK_t訂單_Tot販售項目" FromRole="t訂單" ToRole="t販售項目" />
           <NavigationProperty Name="t會員" Relationship="Database1Model.FK_t訂單_Tot會員" FromRole="t訂單" ToRole="t會員" />
         </EntityType>
+        <Association Name="FK_t私廚可預訂時間_Tot私廚">
+          <End Type="Database1Model.t私廚" Role="t私廚" Multiplicity="1" />
+          <End Type="Database1Model.t私廚可預訂時間" Role="t私廚可預訂時間" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="t私廚">
+              <PropertyRef Name="fCID" />
+            </Principal>
+            <Dependent Role="t私廚可預訂時間">
+              <PropertyRef Name="fCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_t訂單_Tot販售項目">
           <End Type="Database1Model.t販售項目" Role="t販售項目" Multiplicity="1" />
           <End Type="Database1Model.t訂單" Role="t訂單" Multiplicity="*" />

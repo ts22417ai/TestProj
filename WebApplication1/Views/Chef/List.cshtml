@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.f私廚簡介)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { fCID = item.fCID }) |
+            @Html.ActionLink("To Product", "ListFromtChef", "Product",  new { fCID = item.fCID }, null) |
+            @Html.ActionLink("Delete", "Delete", new { fCID = item.fCID , fUID= item.fUID})
         </td>
     </tr>
 }

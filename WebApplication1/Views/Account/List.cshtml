@@ -88,7 +88,7 @@
         @Html.DisplayFor(modelItem => item.f居住縣市)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.f會員照片)
+        <img width="100" height="70" src="~/Content/Memberimage/@Html.DisplayFor(modelItem => item.f會員照片)" />
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.f點數)
@@ -98,17 +98,11 @@
     </td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { fUID = item.fUID }) |
+        @Html.ActionLink("會員資料", "Details", new { fUID = item.fUID }) |
         @Html.ActionLink("Delete", "Delete", new { fUID = item.fUID })
 
     </td>
-    <td>
-        @{
-            if (item.f權限 == 2)
-            {
-                Html.ActionLink("chef", "EditFromUID", "Chef",  new { fUID = item.fUID });
-            }
-         }
-    </td>
+
 </tr>
     }
 

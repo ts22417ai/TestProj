@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace WebApplication1.Controllers
 {
+    
     public class FontendController : Controller
     {
         // GET: Fontend
@@ -76,5 +77,35 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+
+        // 設定可預訂時間
+        public ActionResult calendar()
+        {
+            return View();
+        }
+
+        // 會員中心(私廚)(有細調)
+        public ActionResult chefcenter()
+        {
+            return View();
+        }
+
+        // 會員中心(一般)(有細調)
+        public ActionResult membercenter()
+        {
+            return View();
+        }
+
+        // 首頁 (待修正(圖片文字+陰影))
+        public ActionResult index()
+        {
+            return View();
+        }
+
+        // 登入
+        public ActionResult login()
+        {
+            return View();
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace WebApplication1.Models.Common
             scsb.DataSource = @"(LocalDB)\MSSQLLocalDB";
 
             // 不可用 @"..//..//Database2.mdf";  ??
-            scsb.AttachDBFilename = @"|DataDirectory|Database1.mdf"; // |DataDirectory| 預設-> \bin\Debug\
+            scsb.AttachDBFilename = @"|DataDirectory|Database2.mdf"; // |DataDirectory| 預設-> \bin\Debug\
                                                                      // scsb.InitialCatalog = "mydb"; // 資料庫名稱
             scsb.IntegratedSecurity = true; // 整合驗證
 

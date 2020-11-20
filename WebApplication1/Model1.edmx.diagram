@@ -22,8 +22,8 @@
         <AssociationConnector Association="Database1Model.FK_t菜品_Tot販售項目" ManuallyRouted="false" />
         <AssociationConnector Association="Database1Model.FK_t儲值點數_Tot會員" ManuallyRouted="false" />
         <EntityTypeShape EntityType="Database1Model.t私廚可預訂時間" Width="1.5" PointX="5.25" PointY="9" />
-        <AssociationConnector Association="Database1Model.FK_t私廚可預訂時間_Tot私廚" />
         <EntityTypeShape EntityType="Database1Model.t訂單" Width="1.5" PointX="10.5" PointY="7.75" />
+        <AssociationConnector Association="Database1Model.FK_t私廚可預訂時間_Tot私廚" />
         <AssociationConnector Association="Database1Model.FK_t訂單_Tot販售項目" />
         <AssociationConnector Association="Database1Model.FK_t訂單_Tot會員" />
       </Diagram>

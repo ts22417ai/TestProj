@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="~/Content/img/core-img/favicon.ico">
+    <link rel="stylesheet" href="~/Content/style.css">
+
+
+    @* Add styles *@
+    @RenderSection("styles", required: false)
+
+</head>
+<body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="index.html"><span class="logo-font">Chef's Foody</span></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="#">首頁</a></li>
+                                    <li><a href="#">關於我們</a></li>
+                                    <li><a href="#">服務項目</a></li>
+                                    <li>
+                                        <a href="#">會員中心</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">會員中心</a></li>
+                                            <li><a href="#">交易紀錄</a></li>
+                                            <li><a href="buypoint.html">儲值點數</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>@Html.ActionLink("登入", "login", "Account")</li>
+                                    <li>@Html.ActionLink("註冊", "Register", "Account")</li>
+                                    <!-- <li><a href="#">登出</a></li> -->
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="hero spad set-bg" style="background-image: url('/Content/img/james-img/1.jpg');">
+        <div class="container">
+            <div class="receipe-post-area section-padding-80">
+
+                <!-- Receipe Post Search -->
+                <div class="receipe-post-search search_bc">
+                    <div class="container">
+                        <div class="searchfont">Choose What You Want！</div>
+
+                        <div class="row">
+                            <div class="col-12 col-lg-2">
+                                <select name="select1" id="select1">
+                                    <option disabled selected>風格</option>
+                                    <option value="1">中式</option>
+                                    <option value="2">法式</option>
+                                    <option value="3">日式</option>
+                                    <option value="4">義式</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-2">
+                                <select name="select1" id="select2">
+                                    <option disabled selected>服務選項</option>
+                                    <option value="1">私廚到你家</option>
+                                    <option value="2">線上課程</option>
+                                    <option value="3">線下課程</option>
+
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-2 ">
+                                <input id="meeting" type="date" value="" class="dtpicker" style="padding-left: 12px;" />
+
+                            </div>
+                            <div class="col-12 col-lg-2">
+                                <select name="select1" id="select2">
+                                    <option value="1" disabled selected>時段</option>
+                                    <option value="1">午餐</option>
+                                    <option value="1">晚餐</option>
+
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-2">
+                                <select name="select1" id="select2">
+                                    <option value="1" disabled selected>地點</option>
+                                    <option disabled selected>服務地區</option>
+                                    <option value="1">台北市</option>
+                                    <option value="2">新北市</option>
+                                    <option value="3">基隆市</option>
+                                    <option value="4">桃園市</option>
+                                    <option value="5">新竹市</option>
+                                    <option value="6">新竹縣</option>
+                                    <option value="7">苗栗縣</option>
+                                    <option value="8">台中市</option>
+                                    <option value="9">彰化縣</option>
+                                    <option value="10">南投縣</option>
+                                    <option value="11">雲林縣</option>
+                                    <option value="12">嘉義市</option>
+                                    <option value="13">嘉義縣</option>
+                                    <option value="14">台南市</option>
+                                    <option value="15">高雄市</option>
+                                    <option value="16">屏東縣</option>
+                                    <option value="17">宜蘭縣</option>
+                                    <option value="18">花蓮縣</option>
+                                    <option value="19">台東縣</option>
+                                    <option value="20">澎湖縣</option>
+                                    <option value="21">金門縣</option>
+                                    <option value="22">連江縣</option>
+                                </select>
+                            </div>
+
+                            <div class=" col-lg-2 ">
+                                <button type="submit" class="btn delicious-btn" data-toggle="modal"
+                                        data-target="#modal1" style="width: 100%;">
+                                    Search
+                                </button>
+                                <!--彈跳視窗-->
+
+
+                            </div>
+                        </div>
+                        <div class="searchfont mt-5">Or Enter Key Words！</div>
+
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <input type="text" name="searchstring" class="form-control" placeholder="請輸入商品名稱"
+                                       style="margin-bottom: 20px;">
+                            </div>
+                            <div class="col-lg-2">
+                                <button type="submit" class="btn delicious-btn" data-toggle="modal"
+                                        data-target="#modal1" style="width: 100%;">
+                                    Search
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    @RenderBody()
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-light">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                    <!-- Footer Social Info -->
+                    <div class="footer-social-info text-right">
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Copywrite -->
+                    <p>
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved
+                    </p>
+                    <!-- Footer Logo -->
+                    <div class="footer-logo">
+                        <a href="index.html"><span class="logo-font-footer">Chef's Foody</span></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+    <!-- ##### Breadcumb Area End ##### -->
+    <footer></footer>
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <!-- Popper js -->
+    <!-- Bootstrap js -->
+    <!-- All Plugins js -->
+    <!-- Active js -->
+    @Scripts.Render("~/bundles/FontendJS")
+
+    <script>
+        if ($('[type="date"]').prop('type') != 'date') {
+
+            $('[type="date"]').datepicker();
+        }
+    </script>
+
+    @* Add scripts *@
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

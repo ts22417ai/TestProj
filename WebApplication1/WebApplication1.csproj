@@ -200,6 +200,9 @@
     <Compile Include="ViewModels\Account\基本資料.cs" />
     <Compile Include="ViewModels\Account\多數模型.cs" />
     <Compile Include="ViewModels\Account\簡易註冊.cs" />
+    <Compile Include="ViewModels\Order\ClientInfoVM.cs" />
+    <Compile Include="ViewModels\Order\ChefInfoVM.cs" />
+    <Compile Include="ViewModels\Order\BuyPointVM.cs" />
     <Compile Include="ViewModels\Product\ProductCreateVM.cs" />
     <Compile Include="ViewModels\Schedule\CScheduleViewModel.cs" />
   </ItemGroup>
@@ -359,9 +362,18 @@
     <Content Include="Views\Account\registersuccess.cshtml" />
     <Content Include="Views\Account\Details.cshtml" />
     <Content Include="Views\Account\Details_edit.cshtml" />
-    <Content Include="Views\Schedule\List.cshtml" />
-    <Content Include="Views\SearchResult\SearchByCondition.cshtml" />
+    <Content Include="Views\Fontend\calendar.cshtml" />
+    <Content Include="Views\Fontend\chefcenter.cshtml" />
+    <Content Include="Views\Fontend\membercenter.cshtml" />
+    <Content Include="Views\Shared\_LayoutIndex.cshtml" />
+    <Content Include="Views\Order\chefInfo.cshtml" />
+    <Content Include="Views\Fontend\index.cshtml" />
+    <Content Include="Views\Fontend\login.cshtml" />
     <Content Include="Views\Schedule\Create.cshtml" />
+    <Content Include="Views\Schedule\Edit.cshtml" />
+    <Content Include="Views\Schedule\List123.cshtml" />
+    <Content Include="Views\SearchResult\SearchByCondition.cshtml" />
+    <Content Include="Views\Schedule\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Memberimage\" />
@@ -369,7 +381,6 @@
     <Folder Include="Models\Order\" />
     <Folder Include="Models\Product\" />
     <Folder Include="ViewModels\Home\" />
-    <Folder Include="ViewModels\Order\" />
     <Folder Include="Views\會員\" />
   </ItemGroup>
   <ItemGroup>

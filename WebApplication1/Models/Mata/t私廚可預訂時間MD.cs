@@ -29,10 +29,10 @@ namespace WebApplication1
             [Display(Name = "日期")]
             public System.DateTime f日期 { get; set; }
 
-            [Range(1, 3)]
+            [Range(1, 2)]
             public int f時段 { get; set; }
 
-            [Range(1, 3)]
+            [Range(1, 2)]
             public int f狀態 { get; set; }
         }
     }
