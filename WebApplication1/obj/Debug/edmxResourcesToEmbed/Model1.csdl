@@ -22,8 +22,19 @@
     <Property Name="f風格" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="f服務種類" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="t會員" Relationship="Self.FK_t私廚_Tot會員" FromRole="t私廚" ToRole="t會員" />
+    <NavigationProperty Name="t私廚可預訂時間" Relationship="Self.FK_t私廚可預訂時間_Tot私廚" FromRole="t私廚" ToRole="t私廚可預訂時間" />
     <NavigationProperty Name="t販售項目" Relationship="Self.FK_t販售項目_Tot私廚" FromRole="t私廚" ToRole="t販售項目" />
-    <NavigationProperty Name="t私廚可預訂時間" Relationship="Database1Model.FK_t私廚可預訂時間_Tot私廚" FromRole="t私廚" ToRole="t私廚可預訂時間" />
+  </EntityType>
+  <EntityType Name="t私廚可預訂時間">
+    <Key>
+      <PropertyRef Name="fTID" />
+    </Key>
+    <Property Name="fTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fCID" Type="Int32" Nullable="false" />
+    <Property Name="f日期" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="f時段" Type="Int32" Nullable="false" />
+    <Property Name="f狀態" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="t私廚" Relationship="Self.FK_t私廚可預訂時間_Tot私廚" FromRole="t私廚可預訂時間" ToRole="t私廚" />
   </EntityType>
   <EntityType Name="t服務種類">
     <Key>
@@ -32,6 +43,23 @@
     <Property Name="fKID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="f服務種類" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="t販售項目" Relationship="Self.FK_t販售項目_Tot服務種類" FromRole="t服務種類" ToRole="t販售項目" />
+  </EntityType>
+  <EntityType Name="t訂單">
+    <Key>
+      <PropertyRef Name="fOID" />
+    </Key>
+    <Property Name="fOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fUID" Type="Int32" Nullable="false" />
+    <Property Name="fPID" Type="Int32" Nullable="false" />
+    <Property Name="f訂購日期" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="f預定日期" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="f評價日期" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="f數量" Type="Int32" Nullable="false" />
+    <Property Name="f狀態" Type="Int32" Nullable="false" />
+    <Property Name="f評級" Type="Int32" Nullable="false" />
+    <Property Name="f評價內容" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="t販售項目" Relationship="Self.FK_t訂單_Tot販售項目" FromRole="t訂單" ToRole="t販售項目" />
+    <NavigationProperty Name="t會員" Relationship="Self.FK_t訂單_Tot會員" FromRole="t訂單" ToRole="t會員" />
   </EntityType>
   <EntityType Name="t風格">
     <Key>
@@ -58,15 +86,15 @@
     <NavigationProperty Name="t我的最愛" Relationship="Self.FK_t我的最愛_Tot販售項目" FromRole="t販售項目" ToRole="t我的最愛" />
     <NavigationProperty Name="t私廚" Relationship="Self.FK_t販售項目_Tot私廚" FromRole="t販售項目" ToRole="t私廚" />
     <NavigationProperty Name="t服務種類" Relationship="Self.FK_t販售項目_Tot服務種類" FromRole="t販售項目" ToRole="t服務種類" />
+    <NavigationProperty Name="t訂單" Relationship="Self.FK_t訂單_Tot販售項目" FromRole="t販售項目" ToRole="t訂單" />
     <NavigationProperty Name="t風格" Relationship="Self.FK_t販售項目_Tot風格" FromRole="t販售項目" ToRole="t風格" />
     <NavigationProperty Name="t菜品" Relationship="Self.FK_t菜品_Tot販售項目" FromRole="t販售項目" ToRole="t菜品" />
-    <NavigationProperty Name="t訂單" Relationship="Database1Model.FK_t訂單_Tot販售項目" FromRole="t販售項目" ToRole="t訂單" />
   </EntityType>
   <EntityType Name="t菜品">
     <Key>
       <PropertyRef Name="fVID" />
     </Key>
-    <Property Name="fVID" Type="Int32" Nullable="false" />
+    <Property Name="fVID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="fPID" Type="Int32" Nullable="false" />
     <Property Name="f菜品名稱" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="f菜品簡介" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
@@ -92,8 +120,8 @@
     <Property Name="f權限" Type="Int32" />
     <NavigationProperty Name="t我的最愛" Relationship="Self.FK_t我的最愛_Tot會員" FromRole="t會員" ToRole="t我的最愛" />
     <NavigationProperty Name="t私廚" Relationship="Self.FK_t私廚_Tot會員" FromRole="t會員" ToRole="t私廚" />
+    <NavigationProperty Name="t訂單" Relationship="Self.FK_t訂單_Tot會員" FromRole="t會員" ToRole="t訂單" />
     <NavigationProperty Name="t儲值點數" Relationship="Self.FK_t儲值點數_Tot會員" FromRole="t會員" ToRole="t儲值點數" />
-    <NavigationProperty Name="t訂單" Relationship="Database1Model.FK_t訂單_Tot會員" FromRole="t會員" ToRole="t訂單" />
   </EntityType>
   <EntityType Name="t儲值點數">
     <Key>
@@ -141,6 +169,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_t私廚可預訂時間_Tot私廚">
+    <End Role="t私廚" Type="Self.t私廚" Multiplicity="1" />
+    <End Role="t私廚可預訂時間" Type="Self.t私廚可預訂時間" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t私廚">
+        <PropertyRef Name="fCID" />
+      </Principal>
+      <Dependent Role="t私廚可預訂時間">
+        <PropertyRef Name="fCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_t販售項目_Tot私廚">
     <End Role="t私廚" Type="Self.t私廚" Multiplicity="1" />
     <End Role="t販售項目" Type="Self.t販售項目" Multiplicity="*" />
@@ -162,6 +202,34 @@
       </Principal>
       <Dependent Role="t販售項目">
         <PropertyRef Name="fKID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t訂單_Tot販售項目">
+    <End Role="t販售項目" Type="Self.t販售項目" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="t訂單" Type="Self.t訂單" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t販售項目">
+        <PropertyRef Name="fPID" />
+      </Principal>
+      <Dependent Role="t訂單">
+        <PropertyRef Name="fPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t訂單_Tot會員">
+    <End Role="t會員" Type="Self.t會員" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="t訂單" Type="Self.t訂單" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="t會員">
+        <PropertyRef Name="fUID" />
+      </Principal>
+      <Dependent Role="t訂單">
+        <PropertyRef Name="fUID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -204,7 +272,9 @@
   <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="t我的最愛" EntityType="Self.t我的最愛" />
     <EntitySet Name="t私廚" EntityType="Self.t私廚" />
+    <EntitySet Name="t私廚可預訂時間" EntityType="Self.t私廚可預訂時間" />
     <EntitySet Name="t服務種類" EntityType="Self.t服務種類" />
+    <EntitySet Name="t訂單" EntityType="Self.t訂單" />
     <EntitySet Name="t風格" EntityType="Self.t風格" />
     <EntitySet Name="t販售項目" EntityType="Self.t販售項目" />
     <EntitySet Name="t菜品" EntityType="Self.t菜品" />
@@ -222,6 +292,10 @@
       <End Role="t會員" EntitySet="t會員" />
       <End Role="t私廚" EntitySet="t私廚" />
     </AssociationSet>
+    <AssociationSet Name="FK_t私廚可預訂時間_Tot私廚" Association="Self.FK_t私廚可預訂時間_Tot私廚">
+      <End Role="t私廚" EntitySet="t私廚" />
+      <End Role="t私廚可預訂時間" EntitySet="t私廚可預訂時間" />
+    </AssociationSet>
     <AssociationSet Name="FK_t販售項目_Tot私廚" Association="Self.FK_t販售項目_Tot私廚">
       <End Role="t私廚" EntitySet="t私廚" />
       <End Role="t販售項目" EntitySet="t販售項目" />
@@ -229,6 +303,14 @@
     <AssociationSet Name="FK_t販售項目_Tot服務種類" Association="Self.FK_t販售項目_Tot服務種類">
       <End Role="t服務種類" EntitySet="t服務種類" />
       <End Role="t販售項目" EntitySet="t販售項目" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t訂單_Tot販售項目" Association="Self.FK_t訂單_Tot販售項目">
+      <End Role="t販售項目" EntitySet="t販售項目" />
+      <End Role="t訂單" EntitySet="t訂單" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t訂單_Tot會員" Association="Self.FK_t訂單_Tot會員">
+      <End Role="t會員" EntitySet="t會員" />
+      <End Role="t訂單" EntitySet="t訂單" />
     </AssociationSet>
     <AssociationSet Name="FK_t販售項目_Tot風格" Association="Self.FK_t販售項目_Tot風格">
       <End Role="t風格" EntitySet="t風格" />
@@ -242,84 +324,20 @@
       <End Role="t會員" EntitySet="t會員" />
       <End Role="t儲值點數" EntitySet="t儲值點數" />
     </AssociationSet>
-    <EntitySet Name="t私廚可預訂時間" EntityType="Database1Model.t私廚可預訂時間" />
-    <EntitySet Name="t訂單" EntityType="Database1Model.t訂單" />
-    <AssociationSet Name="FK_t私廚可預訂時間_Tot私廚" Association="Database1Model.FK_t私廚可預訂時間_Tot私廚">
-      <End Role="t私廚" EntitySet="t私廚" />
-      <End Role="t私廚可預訂時間" EntitySet="t私廚可預訂時間" />
-    </AssociationSet>
-    <AssociationSet Name="FK_t訂單_Tot販售項目" Association="Database1Model.FK_t訂單_Tot販售項目">
-      <End Role="t販售項目" EntitySet="t販售項目" />
-      <End Role="t訂單" EntitySet="t訂單" />
-    </AssociationSet>
-    <AssociationSet Name="FK_t訂單_Tot會員" Association="Database1Model.FK_t訂單_Tot會員">
-      <End Role="t會員" EntitySet="t會員" />
-      <End Role="t訂單" EntitySet="t訂單" />
-    </AssociationSet>
+    <FunctionImport Name="sp_交易紀錄" ReturnType="Collection(Database1Model.sp_交易紀錄_Result)">
+      <Parameter Name="fUID" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
-  <EntityType Name="t私廚可預訂時間">
-    <Key>
-      <PropertyRef Name="fTID" />
-    </Key>
-    <Property Name="fTID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fCID" Type="Int32" Nullable="false" />
-    <Property Name="f日期" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="f時段" Type="Int32" Nullable="false" />
-    <Property Name="f狀態" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="t私廚" Relationship="Database1Model.FK_t私廚可預訂時間_Tot私廚" FromRole="t私廚可預訂時間" ToRole="t私廚" />
-  </EntityType>
-  <EntityType Name="t訂單">
-    <Key>
-      <PropertyRef Name="fOID" />
-    </Key>
-    <Property Name="fOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="fUID" Type="Int32" Nullable="false" />
-    <Property Name="fPID" Type="Int32" Nullable="false" />
-    <Property Name="f訂購日期" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="f預定日期" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="f評價日期" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="f數量" Type="Int32" Nullable="false" />
-    <Property Name="f總價" Type="Int32" Nullable="false" />
-    <Property Name="f狀態" Type="Int32" Nullable="false" />
-    <Property Name="f評級" Type="Int32" Nullable="false" />
-    <Property Name="f評價內容" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="t販售項目" Relationship="Database1Model.FK_t訂單_Tot販售項目" FromRole="t訂單" ToRole="t販售項目" />
-    <NavigationProperty Name="t會員" Relationship="Database1Model.FK_t訂單_Tot會員" FromRole="t訂單" ToRole="t會員" />
-  </EntityType>
-  <Association Name="FK_t私廚可預訂時間_Tot私廚">
-    <End Type="Database1Model.t私廚" Role="t私廚" Multiplicity="1" />
-    <End Type="Database1Model.t私廚可預訂時間" Role="t私廚可預訂時間" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="t私廚">
-        <PropertyRef Name="fCID" />
-      </Principal>
-      <Dependent Role="t私廚可預訂時間">
-        <PropertyRef Name="fCID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_t訂單_Tot販售項目">
-    <End Type="Database1Model.t販售項目" Role="t販售項目" Multiplicity="1" />
-    <End Type="Database1Model.t訂單" Role="t訂單" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="t販售項目">
-        <PropertyRef Name="fPID" />
-      </Principal>
-      <Dependent Role="t訂單">
-        <PropertyRef Name="fPID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_t訂單_Tot會員">
-    <End Type="Database1Model.t會員" Role="t會員" Multiplicity="1" />
-    <End Type="Database1Model.t訂單" Role="t訂單" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="t會員">
-        <PropertyRef Name="fUID" />
-      </Principal>
-      <Dependent Role="t訂單">
-        <PropertyRef Name="fUID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
+  <ComplexType Name="sp_交易紀錄_Result">
+    <Property Type="String" Name="行為" Nullable="false" MaxLength="2" />
+    <Property Type="DateTime" Name="日期" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="點數" Nullable="true" />
+    <Property Type="String" Name="項目名稱" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="項目ID" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="聯絡人" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="聯絡人ID" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="預定日期" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="訂單ID" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="狀態" Nullable="true" MaxLength="30" />
+  </ComplexType>
 </Schema>

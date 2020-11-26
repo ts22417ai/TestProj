@@ -4,6 +4,10 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
+@section Breadcumb {
+    @{ Html.RenderPartial("~/Views/Shared/_Breadcumb一般.cshtml"); }
+}
+
 <!-- ##### memberinfo Start ##### -->
 <div class="contact-area section-padding-0-80">
     <div class="container">
@@ -23,7 +27,7 @@
                                        accept="image/gif, image/png, image/jpg, image/jpeg"
                                        style="padding-left: 100px;">
                             </div>
-                            
+
 
                             <div class="col-12 mt-2">
                                 <input type="text" class="form-control" id="realname" placeholder="真實姓名" required>
@@ -44,7 +48,7 @@
                             </div>
                             <div class="col-12 mt-2">
                                 <select name="service-area" id="service-area" class="form-control-option" required>
-                                    <option disabled selected>服務地區</option>
+                                    <option disabled selected>請選擇地址</option>
                                     <option value="1">台北市</option>
                                     <option value="2">新北市</option>
                                     <option value="3">基隆市</option>
@@ -95,7 +99,7 @@
 
 @section scripts {
     <script>
-        (function (window, $) {
+        {
             $("#file").change(function () {
                 readURL(this);
             });
@@ -108,6 +112,6 @@
                     reader.readAsDataURL(input.files[0]);
                 }
             }
-        })(window, $);
+        }
     </script>
 }

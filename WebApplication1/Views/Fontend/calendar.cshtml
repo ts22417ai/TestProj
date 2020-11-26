@@ -3,6 +3,9 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
+@section Breadcumb {
+    @{ Html.RenderPartial("~/Views/Shared/_Breadcumb一般.cshtml"); }
+}
 
 <div class="container contact-area section-padding-0-80">
     <form action="#" method="post">
@@ -82,11 +85,11 @@
                 //日期插入到dateList
                 for (var i = 1; i <= allDay; i++) {
                     $(".dateList").append(`
-                        <li>
-                            <input type="button" value="${i}" class="nobuttonstyly"><br>
-                            <input type="button" value="午" class="nobuttonstyly period" id="${year}-${month + 1}-${i}-1">
-                            <input type="button" value="晚" class="nobuttonstyly period" id="${year}-${month + 1}-${i}-2">
-                        </li>`)
+                            <li>
+                                <input type="button" value="${i}" class="nobuttonstyly"><br>
+                                <input type="button" value="午" class="nobuttonstyly period" id="${year}-${month + 1}-${i}-1">
+                                <input type="button" value="晚" class="nobuttonstyly period" id="${year}-${month + 1}-${i}-2">
+                            </li>`)
                 }
 
                 for (const item of available) {
@@ -148,8 +151,6 @@
                 iNow++;
                 run(iNow);
             })
-
-
         });
 
     </script>

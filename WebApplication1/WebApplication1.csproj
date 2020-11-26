@@ -118,6 +118,12 @@
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -128,6 +134,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Test\Controllers\AccController.cs" />
+    <Compile Include="Areas\Test\TestAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ChefController.cs" />
     <Compile Include="Controllers\FontendController.cs" />
@@ -157,6 +165,7 @@
     <Compile Include="Models\Common\Common.cs" />
     <Compile Include="Models\Common\DbClass.cs" />
     <Compile Include="Models\Home\Class1.cs" />
+    <Compile Include="Models\Home\CHomeFeaturesFactory.cs" />
     <Compile Include="Models\Mata\t訂單MD.cs" />
     <Compile Include="Models\Mata\t儲值點數MD.cs" />
     <Compile Include="Models\Mata\t菜品MD.cs" />
@@ -164,9 +173,13 @@
     <Compile Include="Models\Mata\t販售項目MD.cs" />
     <Compile Include="Models\Mata\t會員MD.cs" />
     <Compile Include="Models\Mata\t私廚MD.cs" />
+    <Compile Include="Models\Order\Class1.cs" />
     <Compile Include="Models\SearchResult\CSearchResult.cs" />
     <Compile Include="Models\SearchResult\CSearchResultFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_交易紀錄_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="t儲值點數.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -200,9 +213,15 @@
     <Compile Include="ViewModels\Account\基本資料.cs" />
     <Compile Include="ViewModels\Account\多數模型.cs" />
     <Compile Include="ViewModels\Account\簡易註冊.cs" />
-    <Compile Include="ViewModels\Order\ClientInfoVM.cs" />
-    <Compile Include="ViewModels\Order\ChefInfoVM.cs" />
-    <Compile Include="ViewModels\Order\BuyPointVM.cs" />
+    <Compile Include="ViewModels\Home\PopularProductViewModel.cs" />
+    <Compile Include="ViewModels\Order\v會員中心VM.cs" />
+    <Compile Include="ViewModels\Order\v評價VM.cs" />
+    <Compile Include="ViewModels\Order\v項目訂購VM.cs" />
+    <Compile Include="ViewModels\Order\v登入VM.cs" />
+    <Compile Include="ViewModels\Order\v交易紀錄VM.cs" />
+    <Compile Include="ViewModels\Order\v客戶資訊VM.cs" />
+    <Compile Include="ViewModels\Order\v私廚資訊VM.cs" />
+    <Compile Include="ViewModels\Order\v儲值點數VM.cs" />
     <Compile Include="ViewModels\Product\ProductCreateVM.cs" />
     <Compile Include="ViewModels\Schedule\CScheduleViewModel.cs" />
   </ItemGroup>
@@ -292,6 +311,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\style.css.map" />
     <Content Include="Content\Canterbury.ttf" />
+    <Content Include="Areas\Test\Views\web.config" />
+    <Content Include="Areas\Test\Views\Home\Index.cshtml" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -353,7 +374,6 @@
     <Content Include="Views\Fontend\productinfo.cshtml" />
     <Content Include="Views\Fontend\register.cshtml" />
     <Content Include="Views\Fontend\registersuccess.cshtml" />
-    <Content Include="Views\Order\buyPointCreate.cshtml" />
     <Content Include="Views\Order\List.cshtml" />
     <Content Include="Views\Order\Create.cshtml" />
     <Content Include="Views\Order\Edit.cshtml" />
@@ -365,22 +385,34 @@
     <Content Include="Views\Fontend\calendar.cshtml" />
     <Content Include="Views\Fontend\chefcenter.cshtml" />
     <Content Include="Views\Fontend\membercenter.cshtml" />
-    <Content Include="Views\Shared\_LayoutIndex.cshtml" />
     <Content Include="Views\Order\chefInfo.cshtml" />
     <Content Include="Views\Fontend\index.cshtml" />
     <Content Include="Views\Fontend\login.cshtml" />
-    <Content Include="Views\Schedule\Create.cshtml" />
-    <Content Include="Views\Schedule\Edit.cshtml" />
-    <Content Include="Views\Schedule\List123.cshtml" />
     <Content Include="Views\SearchResult\SearchByCondition.cshtml" />
     <Content Include="Views\Schedule\List.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1 - 複製.cshtml" />
+    <Content Include="Views\Account\index.cshtml" />
+    <Content Include="Views\Fontend\transaction.cshtml" />
+    <Content Include="Views\Fontend\salesitemlist.cshtml" />
+    <Content Include="Views\Fontend\searchlist.cshtml" />
+    <Content Include="Views\Fontend\salesitem.cshtml" />
+    <Content Include="Views\Order\buyPointSuccess.cshtml" />
+    <Content Include="Views\Order\clientInfo.cshtml" />
+    <Content Include="Views\Order\buyPoint.cshtml" />
+    <Content Include="Views\Order\transaction.cshtml" />
+    <Content Include="Views\Fontend\favorite.cshtml" />
+    <Content Include="Views\Order\login.cshtml" />
+    <Content Include="Views\Order\center.cshtml" />
+    <Content Include="Views\Shared\_Breadcumb一般.cshtml" />
+    <Content Include="Views\Order\evaluate.cshtml" />
+    <Content Include="Views\SearchResult\SearchByKeyWord.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\Test\Models\" />
+    <Folder Include="Areas\Test\Views\Shared\" />
     <Folder Include="Content\Memberimage\" />
     <Folder Include="Models\Account\" />
-    <Folder Include="Models\Order\" />
     <Folder Include="Models\Product\" />
-    <Folder Include="ViewModels\Home\" />
     <Folder Include="Views\會員\" />
   </ItemGroup>
   <ItemGroup>

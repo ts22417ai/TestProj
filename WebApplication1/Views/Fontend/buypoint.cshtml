@@ -16,6 +16,9 @@
     </style>
 }
 
+@section Breadcumb {
+    @{ Html.RenderPartial("~/Views/Shared/_Breadcumb一般.cshtml"); }
+}
 
 <!-- ##### BuyPoint Start ##### -->
 <div class="contact-area section-padding-0-80">
@@ -48,11 +51,9 @@
 
 @section scripts {
     <script>
-        (function (window, $) {
-            function dollar() {
-                var dollar = $('input[id=pointqty]').val();
-                $('#dollars').html(`<span>NT$${dollar}</span>`);
-            }
-        })(window, $);
+        function dollar() {
+            var dollar = $('input[id=pointqty]').val();
+            $('#dollars').html(`<span>NT$${dollar}</span>`);
+        }
     </script>
 }

@@ -17,8 +17,8 @@ namespace WebApplication1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public t私廚()
         {
-            this.t販售項目 = new HashSet<t販售項目>();
             this.t私廚可預訂時間 = new HashSet<t私廚可預訂時間>();
+            this.t販售項目 = new HashSet<t販售項目>();
         }
     
         public int fCID { get; set; }
@@ -31,8 +31,8 @@ namespace WebApplication1
     
         public virtual t會員 t會員 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t販售項目> t販售項目 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<t私廚可預訂時間> t私廚可預訂時間 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<t販售項目> t販售項目 { get; set; }
     }
 }

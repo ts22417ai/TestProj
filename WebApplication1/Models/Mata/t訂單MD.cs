@@ -38,13 +38,10 @@ namespace WebApplication1
 
             [Display(Name = "完成日期")]
             [DefaultValue("")]
-            public string f完成日期 { get; set; }
+            public string f評價日期 { get; set; }
 
             [Display(Name = "數量")]
             public int f數量 { get; set; }
-
-            [Display(Name = "總價")]
-            public int f總價 { get; set; }
 
             [Range(1,3)]
             [Display(Name = "狀態")]

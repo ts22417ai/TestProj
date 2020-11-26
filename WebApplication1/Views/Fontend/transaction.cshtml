@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "交易紀錄";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@section Breadcumb {
+    @{ Html.RenderPartial("~/Views/Shared/_Breadcumb一般.cshtml"); }
+}
+
+<!-- ##### transaction Start ##### -->
+<div class="contact-area section-padding-0-80">
+    <div class="container p-0 mt-5 mb-5">
+        <span class="ml-4 mr-4"><i class="fa fa-dot-circle-o" aria-hidden="true"></i>　點數餘額：0點</span>
+        <a href="buypoint.html">
+            <span style="color: #ffa943;">
+                <i class="fa fa-plus"
+                   aria-hidden="true"></i>　儲值點數
+            </span>
+        </a>
+    </div>
+    <div class="container">
+        <table class="tbrecord">
+            <tr>
+                <td><span class="span_left">2020-10-10 14:00</span></td>
+                <td><span></span></td>
+                <td rowspan="2" class="addpoint"><i class="fa fa-plus" style="margin-right: 10px;"></i>500點</td>
+            </tr>
+            <tr>
+                <td class="tbrecord_tb"><span>儲值點數</span></td>
+                <td></td>
+            </tr>
+        </table>
+        <table class="tbrecord">
+            <tr>
+                <td><span class="span_left">2020-10-10 14:00</span></td>
+                <td rowspan="2" class="statussytle">等待服務<br>2020-11-17 午餐</td>
+                <td rowspan="2" class="lesspoint"><i class="fa fa-minus" style="margin-right: 10px;"></i>500點</td>
+            </tr>
+            <tr>
+                <td class="tbrecord_tb"><span>消費 - <a href="@Url.Action("salesitem","Fontend")">套餐/課程名稱</a> - <a href="@Url.Action("chefinfo","Fontend")">私廚名稱</a></span></td>
+            </tr>
+        </table>
+        <table class="tbrecord">
+            <tr>
+                <td><span class="span_left">2020-10-10 14:00</span></td>
+                <td rowspan="2" class="statussytle"><a href="@Url.Action("evaluate","Fontend")"><span class="redstatus">完成確認前往評價 <i class="fa fa-question-circle-o" aria-hidden="true" title="5天後未完成評價，將自動評為5顆星並撥款給私廚。"></i></span></a><br>2020-11-17 午餐</td>
+                <td rowspan="2" class="lesspoint"><i class="fa fa-minus" style="margin-right: 10px;"></i>500點</td>
+            </tr>
+            <tr>
+                <td class="tbrecord_tb"><span>消費 - <a href="@Url.Action("salesitem","Fontend")">套餐/課程名稱</a> - <a href="@Url.Action("chefinfo","Fontend")">私廚名稱</a></span></td>
+            </tr>
+        </table>
+
+        <table class="tbrecord">
+            <tr>
+                <td><span class="span_left">2020-10-10 14:00</span></td>
+                <td rowspan="2" class="statussytle"><span class="bluestatus">已完成評價 </span><br>2020-11-17 午餐</td>
+                <td rowspan="2" class="lesspoint"><i class="fa fa-minus" style="margin-right: 10px;"></i>500點</td>
+            </tr>
+            <tr>
+                <td class="tbrecord_tb"><span>消費 - <a href="@Url.Action("salesitem","Fontend")">套餐/課程名稱</a> - <a href="@Url.Action("chefinfo","Fontend")">私廚名稱</a></span></td>
+            </tr>
+        </table>
+
+        <table class="tbrecord">
+            <tr>
+                <td><span class="span_left">2020-10-10 14:00</span></td>
+                <td rowspan="2" class="statussytle"><span class="waitstatus">待服務 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> </span> <a href="#"><span class="redstatus">完成服務 <i class="fa fa-question-circle-o" aria-hidden="true" title="若已完成服務項目，請點擊「完成服務」，變更客戶的交易狀態後，客戶才能於平台給予您評價。若未點擊「完成服務」，將視為尚未服務。"></i></span></a><br>2020-11-17 午餐</td>
+                <td rowspan="2" class="waitpoint"><i class="fa fa-plus" style="margin-right: 10px;"></i>500點</td>
+            </tr>
+            <tr>
+                <td class="tbrecord_tb"><span>收益 - <a href="@Url.Action("salesitem","Fontend")">套餐/課程名稱</a> - <a href="@Url.Action("clientinfo","Fontend")">客戶名稱</a></span></td>
+            </tr>
+        </table>
+        <table class="tbrecord">
+            <tr>
+                <td><span class="span_left">2020-10-10 14:00</span></td>
+                <td rowspan="2" class="statussytle"><span class="waitstatus">完成未被評價</span><br>2020-11-17 午餐</td>
+                <td rowspan="2" class="waitpoint"><i class="fa fa-plus" style="margin-right: 10px;"></i>500點</td>
+            </tr>
+            <tr>
+                <td class="tbrecord_tb"><span>收益 - <a href="@Url.Action("salesitem","Fontend")">套餐/課程名稱</a> - <a href="@Url.Action("clientinfo","Fontend")">客戶名稱</a></span></td>
+            </tr>
+        </table>
+        <table class="tbrecord">
+            <tr>
+                <td><span class="span_left">2020-10-10 14:00</span></td>
+                <td rowspan="2" class="statussytle"><span class="bluestatus">完成並獲得評價</span><br>2020-11-17 午餐</td>
+                <td rowspan="2" class="addpoint"><i class="fa fa-plus" style="margin-right: 10px;"></i>500點</td>
+            </tr>
+            <tr>
+                <td class="tbrecord_tb"><span>收益 - <a href="@Url.Action("salesitem","Fontend")">套餐/課程名稱</a> - <a href="@Url.Action("clientinfo","Fontend")">客戶名稱</a></span></td>
+            </tr>
+        </table>
+
+
+    </div>
+</div>
+<!-- ##### transaction End ##### -->

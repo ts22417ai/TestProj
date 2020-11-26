@@ -18,8 +18,8 @@ namespace WebApplication1
         public t販售項目()
         {
             this.t我的最愛 = new HashSet<t我的最愛>();
-            this.t菜品 = new HashSet<t菜品>();
             this.t訂單 = new HashSet<t訂單>();
+            this.t菜品 = new HashSet<t菜品>();
         }
     
         public int fPID { get; set; }
@@ -37,10 +37,10 @@ namespace WebApplication1
         public virtual ICollection<t我的最愛> t我的最愛 { get; set; }
         public virtual t私廚 t私廚 { get; set; }
         public virtual t服務種類 t服務種類 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<t訂單> t訂單 { get; set; }
         public virtual t風格 t風格 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<t菜品> t菜品 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t訂單> t訂單 { get; set; }
     }
 }

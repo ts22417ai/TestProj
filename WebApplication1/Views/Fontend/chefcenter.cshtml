@@ -4,14 +4,10 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
-@section styles {
-    <style>
-        .picautosize {
-            padding-top: 100%;
-            position: relative;
-        }
-    </style>
+@section Breadcumb {
+    @{ Html.RenderPartial("~/Views/Shared/_Breadcumb一般.cshtml"); }
 }
+
 
 <!-- ##### clientinfo Start ##### -->
 <div class="contact-area section-padding-0-80">
@@ -46,12 +42,12 @@
                         </div>
                     </div>
                     <div class="col-lg-8 card-bg3">
-                        <div class="mt-5 mb-4"><span style="font-size: 16px;" class="mr-3"><b>真實姓名</b></span></div>
-                        <div class="mb-3 mt-2"><b class="mr-5">暱　　稱</b><span>羊羊</span></div>
+                        <div class="mb-3"><span style="font-size: 16px;" class="mr-3"><b>真實姓名</b></span></div>
+                        <div class="mb-3"><b class="mr-5">暱　　稱</b><span>羊羊</span></div>
                         <div class="mb-3"><b class="mr-5">電　　話</b><span>0911-111-111</span></div>
                         <div class="mb-3"><b class="mr-5">電子郵件</b><span>test@gmail.com</span></div>
                         <div class="mb-3"><b class="mr-5">生　　日</b><span>1991-9-9</span></div>
-                        <div class="mb-5"><b class="mr-5">地　　址</b><span>台北市信義區</span></div>
+                        <div class=""><b class="mr-5">地　　址</b><span>台北市信義區</span></div>
                     </div>
 
 

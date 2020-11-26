@@ -48,7 +48,6 @@
     <Property Name="f預定日期" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="f評價日期" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="f數量" Type="int" Nullable="false" />
-    <Property Name="f總價" Type="int" Nullable="false" />
     <Property Name="f狀態" Type="int" Nullable="false" />
     <Property Name="f評級" Type="int" Nullable="false" />
     <Property Name="f評價內容" Type="nvarchar(max)" Nullable="false" />
@@ -161,7 +160,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_t訂單_Tot販售項目">
-    <End Role="t販售項目" Type="Self.t販售項目" Multiplicity="1" />
+    <End Role="t販售項目" Type="Self.t販售項目" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="t訂單" Type="Self.t訂單" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="t販售項目">
@@ -173,7 +174,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_t訂單_Tot會員">
-    <End Role="t會員" Type="Self.t會員" Multiplicity="1" />
+    <End Role="t會員" Type="Self.t會員" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="t訂單" Type="Self.t訂單" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="t會員">
@@ -244,6 +247,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="sp_交易紀錄" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fUID" Type="int" Mode="In" />
+  </Function>
   <EntityContainer Name="Database1ModelStoreContainer">
     <EntitySet Name="t我的最愛" EntityType="Self.t我的最愛" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="t私廚" EntityType="Self.t私廚" Schema="dbo" store:Type="Tables" />

@@ -25,7 +25,7 @@ namespace WebApplication1.ViewModels.Account
         [DataType(DataType.Password)]   //表示此欄位為密碼欄位，所以輸入時會產生隱碼
         [Required(ErrorMessage = "您必須輸入密碼！")]
         [StringLength(20, MinimumLength = 6, ErrorMessage = "會員密碼的長度需再6~20個字元內！")]
-        [RegularExpression(@"^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{4,15}$", ErrorMessage = "密碼僅能有英文或數字，至少一個大小寫英+數！")]
+        [RegularExpression(@"^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{3,15}$", ErrorMessage = "密碼僅能有英文或數字，至少一個大小寫英+數！")]
         public string f密碼 { get; set; }
 
         [Display(Name = "確認密碼")]

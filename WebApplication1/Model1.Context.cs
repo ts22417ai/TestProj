@@ -12,6 +12,8 @@ namespace WebApplication1
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class Database1Entities : DbContext
     {
@@ -27,13 +29,22 @@ namespace WebApplication1
     
         public virtual DbSet<t我的最愛> t我的最愛 { get; set; }
         public virtual DbSet<t私廚> t私廚 { get; set; }
+        public virtual DbSet<t私廚可預訂時間> t私廚可預訂時間 { get; set; }
         public virtual DbSet<t服務種類> t服務種類 { get; set; }
+        public virtual DbSet<t訂單> t訂單 { get; set; }
         public virtual DbSet<t風格> t風格 { get; set; }
         public virtual DbSet<t販售項目> t販售項目 { get; set; }
         public virtual DbSet<t菜品> t菜品 { get; set; }
         public virtual DbSet<t會員> t會員 { get; set; }
         public virtual DbSet<t儲值點數> t儲值點數 { get; set; }
-        public virtual DbSet<t私廚可預訂時間> t私廚可預訂時間 { get; set; }
-        public virtual DbSet<t訂單> t訂單 { get; set; }
+    
+        public virtual ObjectResult<sp_交易紀錄_Result> sp_交易紀錄(Nullable<int> fUID)
+        {
+            var fUIDParameter = fUID.HasValue ?
+                new ObjectParameter("fUID", fUID) :
+                new ObjectParameter("fUID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_交易紀錄_Result>("sp_交易紀錄", fUIDParameter);
+        }
     }
 }

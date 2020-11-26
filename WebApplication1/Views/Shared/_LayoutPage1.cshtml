@@ -44,18 +44,26 @@
                                     <li><a href="#">首頁</a></li>
                                     <li><a href="#">關於我們</a></li>
                                     <li><a href="#">服務項目</a></li>
-                                    <li>
-                                        <a href="#">會員中心</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">會員中心</a></li>
-                                            <li><a href="#">交易紀錄</a></li>
-                                            <li><a href="buypoint.html">儲值點數</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>@Html.ActionLink("登入", "login", "Account")</li>
-                                    <li>@Html.ActionLink("註冊", "Register", "Account")</li>
-                                    <!-- <li><a href="#">登出</a></li> -->
+                                    @{
+                                        if (Session[WebApplication1.Models.Common.CDictionary.SK_LOGINED_USER_ID] == null)
+                                        {
+                                            <li>@Html.ActionLink("登入", "login", "Account")</li>
+                                            <li>@Html.ActionLink("註冊", "Register", "Account")</li>
+                                        }
+                                        else
+                                        {
+                                            <li>
+                                                <a href="#">會員中心</a>
+                                                <ul class="dropdown">
+                                                    <li>@Html.ActionLink("會員中心", "Details", "Account")</li>
+                                                    <li>@Html.ActionLink("交易紀錄", "Details", "Account")</li>
+                                                    <li>@Html.ActionLink("儲值點數", "Details", "Account")</li>
+                                                    <li>@Html.ActionLink("我的最愛", "Details", "Account")</li>
+                                                </ul>
+                                            </li>
+                                            <li>@Html.ActionLink("登出", "Details", "Account")</li>
+                                        }
+                                    }
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -66,18 +74,10 @@
         </div>
     </header>
     <!-- ##### Header Area End ##### -->
+
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(/Content/img/bg-img/breadcumb1.jpg);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <div class="breadcumb-text text-center">
-                        <h2>@ViewBag.Title</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @RenderSection("Breadcumb", required: false)
+
 
     @RenderBody()
 

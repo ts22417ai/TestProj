@@ -23,11 +23,38 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="t私廚可預訂時間">
+      <EntityTypeMapping TypeName="Database1Model.t私廚可預訂時間">
+        <MappingFragment StoreEntitySet="t私廚可預訂時間">
+          <ScalarProperty Name="fTID" ColumnName="fTID" />
+          <ScalarProperty Name="fCID" ColumnName="fCID" />
+          <ScalarProperty Name="f日期" ColumnName="f日期" />
+          <ScalarProperty Name="f時段" ColumnName="f時段" />
+          <ScalarProperty Name="f狀態" ColumnName="f狀態" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="t服務種類">
       <EntityTypeMapping TypeName="Database1Model.t服務種類">
         <MappingFragment StoreEntitySet="t服務種類">
           <ScalarProperty Name="fKID" ColumnName="fKID" />
           <ScalarProperty Name="f服務種類" ColumnName="f服務種類" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t訂單">
+      <EntityTypeMapping TypeName="Database1Model.t訂單">
+        <MappingFragment StoreEntitySet="t訂單">
+          <ScalarProperty Name="fOID" ColumnName="fOID" />
+          <ScalarProperty Name="fUID" ColumnName="fUID" />
+          <ScalarProperty Name="fPID" ColumnName="fPID" />
+          <ScalarProperty Name="f訂購日期" ColumnName="f訂購日期" />
+          <ScalarProperty Name="f預定日期" ColumnName="f預定日期" />
+          <ScalarProperty Name="f評價日期" ColumnName="f評價日期" />
+          <ScalarProperty Name="f數量" ColumnName="f數量" />
+          <ScalarProperty Name="f狀態" ColumnName="f狀態" />
+          <ScalarProperty Name="f評級" ColumnName="f評級" />
+          <ScalarProperty Name="f評價內容" ColumnName="f評價內容" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -95,33 +122,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="t私廚可預訂時間">
-      <EntityTypeMapping TypeName="Database1Model.t私廚可預訂時間">
-        <MappingFragment StoreEntitySet="t私廚可預訂時間">
-          <ScalarProperty Name="f狀態" ColumnName="f狀態" />
-          <ScalarProperty Name="f時段" ColumnName="f時段" />
-          <ScalarProperty Name="f日期" ColumnName="f日期" />
-          <ScalarProperty Name="fCID" ColumnName="fCID" />
-          <ScalarProperty Name="fTID" ColumnName="fTID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="t訂單">
-      <EntityTypeMapping TypeName="Database1Model.t訂單">
-        <MappingFragment StoreEntitySet="t訂單">
-          <ScalarProperty Name="f評價內容" ColumnName="f評價內容" />
-          <ScalarProperty Name="f評級" ColumnName="f評級" />
-          <ScalarProperty Name="f狀態" ColumnName="f狀態" />
-          <ScalarProperty Name="f總價" ColumnName="f總價" />
-          <ScalarProperty Name="f數量" ColumnName="f數量" />
-          <ScalarProperty Name="f評價日期" ColumnName="f評價日期" />
-          <ScalarProperty Name="f預定日期" ColumnName="f預定日期" />
-          <ScalarProperty Name="f訂購日期" ColumnName="f訂購日期" />
-          <ScalarProperty Name="fPID" ColumnName="fPID" />
-          <ScalarProperty Name="fUID" ColumnName="fUID" />
-          <ScalarProperty Name="fOID" ColumnName="fOID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_交易紀錄" FunctionName="Database1Model.Store.sp_交易紀錄">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Database1Model.sp_交易紀錄_Result">
+          <ScalarProperty Name="行為" ColumnName="行為" />
+          <ScalarProperty Name="日期" ColumnName="日期" />
+          <ScalarProperty Name="點數" ColumnName="點數" />
+          <ScalarProperty Name="項目名稱" ColumnName="項目名稱" />
+          <ScalarProperty Name="項目ID" ColumnName="項目ID" />
+          <ScalarProperty Name="聯絡人" ColumnName="聯絡人" />
+          <ScalarProperty Name="聯絡人ID" ColumnName="聯絡人ID" />
+          <ScalarProperty Name="預定日期" ColumnName="預定日期" />
+          <ScalarProperty Name="訂單ID" ColumnName="訂單ID" />
+          <ScalarProperty Name="狀態" ColumnName="狀態" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

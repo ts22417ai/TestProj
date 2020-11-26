@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="~/Content/img/core-img/favicon.ico">
+    <link rel="stylesheet" href="~/Content/style.css">
+
+    @* Add styles *@
+    @RenderSection("styles", required: false)
+
+</head>
+<body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="index.html"><span class="logo-font">Chef's Foody</span></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap">
+                                    <span class="top"></span>
+                                    <span class="bottom"></span>
+                                </div>
+                            </div>
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li>
+                                        <a href="#">首頁</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">關於我們</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">服務項目</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">會員中心</a>
+                                        <ul class="dropdown">
+                                            <li>
+                                            <li>@Html.ActionLink("會員中心", "details", "Account")</li>
+</li>
+                                            <li>
+                                                <a href="#">交易紀錄</a>
+                                            </li>
+                                            <li>
+                                                <a href="buypoint.html">儲值點數</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">@Session["WelCome"]</a></li>
+                                    <li>@Html.ActionLink("登出", "Logout", "Account")</li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(/Content/img/bg-img/breadcumb1.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-text text-center">
+                        <h2>@ViewBag.Title</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-light">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                    <!-- Footer Social Info -->
+                    <div class="footer-social-info text-right">
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Copywrite -->
+                    <p>
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved
+                    </p>
+                    <!-- Footer Logo -->
+                    <div class="footer-logo">
+                        <a href="index.html"><span class="logo-font-footer">Chef's Foody</span></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+    <!-- ##### Breadcumb Area End ##### -->
+    <footer></footer>
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <!-- Popper js -->
+    <!-- Bootstrap js -->
+    <!-- All Plugins js -->
+    <!-- Active js -->
+    @Scripts.Render("~/bundles/FontendJS")
+
+    @* Add scripts *@
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

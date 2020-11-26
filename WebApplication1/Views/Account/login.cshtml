@@ -1,49 +1,36 @@
 ﻿
 @{
     ViewBag.Title = "登入";
-    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
-
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-        <div class="form-group">
-
-            <div class="col-md-10">
-                輸入帳號<br />
-                @Html.TextBox("txtAccount")
-
-            </div>
-            <div class="col-md-10">
-                輸入密碼<br />
-                @Html.TextBox("txtPassword")
-
-            </div>
-
-        </div>
-
-
-        <div class="form-group">
-            <div class="col-md-offset-0 col-md-10">
-                <input type="submit" value="確定" class="btn btn-red" />
-                @Html.ActionLink("註冊", "Register", "Account", new { @class = "btn btn-success" })
-                @Html.ActionLink("測試用會員列表", "list", "Account", new { @class = "btn btn-success" })
+<div class="contact-area section-padding-0-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="contact-form-area">
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div class="col-12 mt-5">
+                                <input type="text" class="form-control" id="account" name="account" placeholder="帳號" required>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="密碼" required>
+                                <div> <span style="color:red">@ViewBag.message</span></div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn delicious-btn mt-30" type="submit">登入</button>
+                            </div>
+                            <div class="col-12 text-right mt-4">
+                                <span>還沒有帳號嗎？點擊  <a href="@Url.Action("Register", "Account")" class="single-contact-information"><h6>註冊</h6></a></span>
+                                @Html.ActionLink("測試用會員列表", "list", "Account", new { @class = "btn btn-success" })
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-
     </div>
-}
+</div>
 
 
-
-<script src="~/Scripts/jquery-3.4.1.min.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 

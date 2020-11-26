@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 namespace WebApplication1.Models.Common
 {
 
@@ -11,26 +12,75 @@ namespace WebApplication1.Models.Common
     /// </summary>
     public class CDictionary
     {
-        public static readonly string SK_PRODUCTS_PUSHED_SHOPPING_LIST = "SK_PRODUCTS_PUSHED_SHOPPING_LIST";
-        public static readonly string SK_LOGINED_USER = "SK_LOGINED_USER";
-        public static readonly string SK_AUTHTICATION_CODE = "SK_AUTHTICATION_CODE";
+        public static readonly string SK_LOGINED_USER_ID = "SK_LOGINED_USER_ID";
+        public static readonly string SK_LOGINED_CHEF_ID = "SK_LOGINED_CHEF_ID";
+        public static readonly string SK_LOGINED_USER_AUTH = "SK_LOGINED_USER_AUTH";
+
+        public static readonly string 照片存檔位置_會員 = "Memberimage";
+
+        public static string[] 地區 =
+        {
+            "台北市",
+            "新北市",
+            "基隆市",
+            "桃園市",
+            "新竹市",
+            "新竹縣",
+            "苗栗縣",
+            "台中市",
+            "彰化縣",
+            "南投縣",
+            "雲林縣",
+            "嘉義市",
+            "嘉義縣",
+            "台南市",
+            "高雄市",
+            "屏東縣",
+            "宜蘭縣",
+            "花蓮縣",
+            "台東縣",
+            "澎湖縣",
+            "金門縣",
+            "連江縣"
+        };
+
+        public static string[,] 時段 =
+        {
+            { "午餐","1" },
+            { "晚餐","2" }
+        };
 
     }
 
     /// <summary>
-    /// [t私廚可預訂時間]
-    ///  的狀態
+    /// 會員_權限
     /// </summary>
-    public enum e私廚可預訂時間_狀態
+    public enum e會員_權限
     {
-        可預訂時間 = 1,
-        已被預訂_不可修改 = 3
+        一般 = 1,
+        私廚 = 2
     }
 
-    public enum e私廚可預訂時間_時段
+
+
+    /// <summary>
+    /// [t私廚可預訂時間]
+    ///  的時段
+    /// </summary>
+    public enum e私廚可預訂_時段
     {
         午餐 = 1,
         晚餐 = 2
+    }
+
+    /// <summary>
+    /// [t私廚可預訂時間]
+    ///  的時段之狀態
+    /// </summary>
+    public enum e私廚可預訂_時段_狀態
+    {
+        可預定 = 1,
+        被預訂_不可修改 = 2
     }
 
     /// <summary>
@@ -40,13 +90,15 @@ namespace WebApplication1.Models.Common
     public enum e訂單狀態
     {
         客戶預訂 = 1,
-        私廚確認_開放評價 = 2,
-        客戶確認_客戶評價 = 3
+        私廚確認_開放客戶評價 = 2,
+        客戶確認_完成評價 = 3
     }
 
-    public class Func
+
+
+    public class 共用方法
     {
-        public string 照片處理(HttpPostedFileBase httpPostedFile)
+        public string 照片更新(HttpPostedFileBase httpPostedFile, string 根目錄, string 存檔位置, string 舊照片位置)
         {
             // 取得 . 的位置
             int point = httpPostedFile.FileName.IndexOf(".");
@@ -55,12 +107,21 @@ namespace WebApplication1.Models.Common
                 .Substring(point, httpPostedFile.FileName.Length - point);
             // 不重複16位檔名
             string photoName = Guid.NewGuid().ToString() + estention;
-            string location = @"~/Content/" + photoName;
-            httpPostedFile.SaveAs(location);
 
+            // 照片存檔
+            string location = $@"/Content/{存檔位置}/" + photoName;
+            httpPostedFile.SaveAs($@"{根目錄 + location}");
+
+            // 刪除舊照片
+            if (System.IO.File.Exists($@"{根目錄 + 舊照片位置}"))
+            {
+                System.IO.File.Delete($@"{根目錄 + 舊照片位置}");
+            }
+
+            // 回傳新路徑
             return location;
         }
     }
-    
+
 
 }

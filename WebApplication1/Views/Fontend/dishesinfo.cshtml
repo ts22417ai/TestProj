@@ -4,6 +4,10 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
+@section Breadcumb {
+    @{ Html.RenderPartial("~/Views/Shared/_Breadcumb一般.cshtml"); }
+}
+
 <!-- ##### memberinfo Start ##### -->
 <div class="contact-area section-padding-0-80">
     <div class="container">
@@ -22,7 +26,7 @@
                                        accept="image/gif, image/png, image/jpg, image/jpeg"
                                        style="padding-left: 100px;" required>
                             </div>
-                            
+
                             <div class="col-12 mt-2">
                                 <input type="text" class="form-control" id="pname" placeholder="菜色名稱" required>
                             </div>

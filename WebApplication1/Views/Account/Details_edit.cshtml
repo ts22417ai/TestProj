@@ -2,13 +2,12 @@
 
 @{
     ViewBag.Title = "編輯基本資料";
-    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 
 }
 
 
 @using (Html.BeginForm(
-    "Details_edit", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }
+"Details_edit", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }
 
     ))
 {
@@ -16,7 +15,7 @@
 
     <div class="form-horizontal">
         @Html.HiddenFor(model => model.fUID)
-        <hr />
+
         <div class="contact-area section-padding-0-80">
             <div class="container">
                 <div class="row">
@@ -29,7 +28,7 @@
 
                                     <div class="picbg mt-5 mb-2">
                                         <img id="memberimg" class="img-style"
-                                             src="~/Content/Memberimage/@Html.DisplayFor(model => model.f會員照片)"></img>
+                                             src="~/Content/Memberimage/@Html.DisplayFor(model => model.f會員照片)" onerror="this.src='https://icon-library.com/images/no-image-icon/no-image-icon-5.jpg'">
                                     </div>
 
                                     <div class="col-12" style="margin-top:400px;">
@@ -76,7 +75,6 @@
 
 
 
-                                    @Html.LabelFor(model => model.f居住縣市, htmlAttributes: new { @class = "mr-5 input-font2" })
                                     <div class="col-12 mt-2">
                                         <select name="f居住縣市" id="service-area" class="form-control-option" required>
                                             <option disabled selected>服務地區</option>
@@ -120,14 +118,8 @@
                                         @Html.ValidationMessageFor(model => model.f電子郵件, "", new { @class = "text-danger" })
                                     </div>
 
-
-
-
-
                                     <div class="col-12 text-center">
-                                        <div class="col-md-offset-2 col-md-10">
                                             <input type="submit" value="儲存" class="btn delicious-btn mt-30" />
-                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -137,9 +129,6 @@
             </div>
         </div>
         <!-- ##### memberinfo End ##### -->
-
-
-
 
 
         @section scripts {
@@ -161,13 +150,5 @@
             </script>
             @Scripts.Render("~/bundles/jqueryval")
         }
-
-
-
     </div>
-
-
 }
-
-
-

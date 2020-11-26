@@ -708,92 +708,454 @@ H:\期末專題test merge\TestProj\WebApplication1\obj\Debug\WebApplication1.csp
 H:\期末專題test merge\TestProj\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
 H:\期末專題test merge\TestProj\WebApplication1\obj\Debug\WebApplication1.dll
 H:\期末專題test merge\TestProj\WebApplication1\obj\Debug\WebApplication1.pdb
-H:\期末專題\TestProj\WebApplication1\bin\WebApplication1.dll.config
-H:\期末專題\TestProj\WebApplication1\bin\WebApplication1.dll
-H:\期末專題\TestProj\WebApplication1\bin\WebApplication1.pdb
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\csc.exe
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\csc.exe.config
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\csc.rsp
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\csi.exe
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\csi.exe.config
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\csi.rsp
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.AppContext.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Console.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.IO.Compression.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.IO.Pipes.AccessControl.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.IO.Pipes.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Security.AccessControl.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Security.Claims.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Security.Principal.Windows.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.ValueTuple.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Xml.XPath.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\vbc.exe
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\vbc.exe.config
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\vbc.rsp
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\VBCSCompiler.exe
-H:\期末專題\TestProj\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
-H:\期末專題\TestProj\WebApplication1\bin\Antlr3.Runtime.dll
-H:\期末專題\TestProj\WebApplication1\bin\EntityFramework.dll
-H:\期末專題\TestProj\WebApplication1\bin\EntityFramework.SqlServer.dll
-H:\期末專題\TestProj\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-H:\期末專題\TestProj\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
-H:\期末專題\TestProj\WebApplication1\bin\Newtonsoft.Json.dll
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.Helpers.dll
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.Mvc.dll
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.Optimization.dll
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.Razor.dll
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.WebPages.Deployment.dll
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.WebPages.dll
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.WebPages.Razor.dll
-H:\期末專題\TestProj\WebApplication1\bin\WebGrease.dll
-H:\期末專題\TestProj\WebApplication1\bin\EntityFramework.xml
-H:\期末專題\TestProj\WebApplication1\bin\EntityFramework.SqlServer.xml
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.Helpers.xml
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.Mvc.xml
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.Optimization.xml
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.Razor.xml
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.WebPages.xml
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.WebPages.Deployment.xml
-H:\期末專題\TestProj\WebApplication1\bin\System.Web.WebPages.Razor.xml
-H:\期末專題\TestProj\WebApplication1\bin\Newtonsoft.Json.xml
-H:\期末專題\TestProj\WebApplication1\bin\Antlr3.Runtime.pdb
-H:\期末專題\TestProj\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-H:\期末專題\TestProj\WebApplication1\bin\zh-Hant\EntityFramework.resources.dll
-H:\期末專題\TestProj\WebApplication1\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
-H:\期末專題\TestProj\WebApplication1\bin\zh-Hant\System.Web.Helpers.resources.dll
-H:\期末專題\TestProj\WebApplication1\bin\zh-Hant\System.Web.Mvc.resources.dll
-H:\期末專題\TestProj\WebApplication1\bin\zh-Hant\System.Web.Optimization.resources.dll
-H:\期末專題\TestProj\WebApplication1\bin\zh-Hant\System.Web.Razor.resources.dll
-H:\期末專題\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.resources.dll
-H:\期末專題\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
-H:\期末專題\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
-H:\期末專題\TestProj\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
-H:\期末專題\TestProj\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
-H:\期末專題\TestProj\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
-H:\期末專題\TestProj\WebApplication1\obj\Debug\WebApplication1.dll
-H:\期末專題\TestProj\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\WebApplication1.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\WebApplication1.pdb
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\csc.exe
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\csc.exe.config
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\csc.rsp
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\csi.exe
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\csi.exe.config
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\csi.rsp
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.AppContext.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Console.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.IO.Compression.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.IO.Pipes.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Security.Claims.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.ValueTuple.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\vbc.exe
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\vbc.exe.config
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\vbc.rsp
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\VBCSCompiler.exe
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\Antlr3.Runtime.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\EntityFramework.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\Newtonsoft.Json.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.Helpers.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.Mvc.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.Optimization.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.Razor.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.WebPages.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.WebPages.Razor.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\WebGrease.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\EntityFramework.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\EntityFramework.SqlServer.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.Helpers.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.Mvc.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.Optimization.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.Razor.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.WebPages.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\System.Web.WebPages.Razor.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\Newtonsoft.Json.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\Antlr3.Runtime.pdb
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\zh-Hant\System.Web.Helpers.resources.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\wei\OneDrive\桌面\上傳\TestProj\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\下載\第一版\TestProj\WebApplication1\bin\WebApplication1.dll.config
+D:\下載\第一版\TestProj\WebApplication1\bin\WebApplication1.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\WebApplication1.pdb
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\csc.exe
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\csc.exe.config
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\csc.rsp
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\csi.exe
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\csi.exe.config
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\csi.rsp
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Console.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.IO.Pipes.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Security.AccessControl.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Security.Claims.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Security.Principal.Windows.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\vbc.exe
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\vbc.exe.config
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\vbc.rsp
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\下載\第一版\TestProj\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\下載\第一版\TestProj\WebApplication1\bin\Antlr3.Runtime.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\EntityFramework.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\Newtonsoft.Json.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.Helpers.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.Mvc.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.Optimization.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.Razor.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.WebPages.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\WebGrease.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\EntityFramework.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.Helpers.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.Mvc.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.Optimization.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.Razor.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.WebPages.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\Newtonsoft.Json.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\下載\第一版\TestProj\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\下載\第一版\TestProj\WebApplication1\bin\zh-Hant\EntityFramework.resources.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\zh-Hant\System.Web.Helpers.resources.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\zh-Hant\System.Web.Mvc.resources.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\zh-Hant\System.Web.Optimization.resources.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\zh-Hant\System.Web.Razor.resources.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.resources.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+D:\下載\第一版\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+D:\下載\第一版\TestProj\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\下載\第一版\TestProj\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\下載\第一版\TestProj\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\下載\第一版\TestProj\WebApplication1\obj\Debug\WebApplication1.dll
+D:\下載\第一版\TestProj\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\WebApplication1.dll.config
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\WebApplication1.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\WebApplication1.pdb
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\csc.exe
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\csc.exe.config
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\csc.rsp
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\csi.exe
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\csi.exe.config
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\csi.rsp
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Console.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.IO.Pipes.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Security.AccessControl.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Security.Claims.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Security.Principal.Windows.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\vbc.exe
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\vbc.exe.config
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\vbc.rsp
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\Antlr3.Runtime.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\EntityFramework.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\EntityFramework.SqlServer.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\Newtonsoft.Json.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.Helpers.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.Mvc.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.Optimization.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.Razor.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.WebPages.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\WebGrease.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\EntityFramework.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\EntityFramework.SqlServer.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.Helpers.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.Mvc.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.Optimization.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.Razor.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.WebPages.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\Newtonsoft.Json.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\zh-Hant\EntityFramework.resources.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\zh-Hant\System.Web.Helpers.resources.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\zh-Hant\System.Web.Mvc.resources.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\zh-Hant\System.Web.Optimization.resources.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\zh-Hant\System.Web.Razor.resources.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.resources.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+D:\下載\新增資料夾\TestProj\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\下載\新增資料夾\TestProj\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\下載\新增資料夾\TestProj\WebApplication1\obj\Debug\WebApplication1.dll
+D:\下載\新增資料夾\TestProj\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\全端\私廚專案\WebApplication1\WebApplication1\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+D:\全端\私廚專案\WebApplication1\WebApplication1\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\WebApplication1.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\WebApplication1.pdb
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\csc.exe
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\csc.exe.config
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\csc.rsp
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\csi.exe
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\csi.exe.config
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\csi.rsp
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.AppContext.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Console.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.IO.Compression.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.IO.Pipes.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Claims.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.ValueTuple.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\vbc.exe
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\vbc.exe.config
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\vbc.rsp
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\VBCSCompiler.exe
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\Antlr3.Runtime.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\EntityFramework.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\Newtonsoft.Json.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.Helpers.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.Mvc.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.Optimization.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.Razor.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.Razor.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\WebGrease.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\EntityFramework.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\EntityFramework.SqlServer.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.Helpers.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.Mvc.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.Optimization.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.Razor.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.Razor.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\Newtonsoft.Json.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\Antlr3.Runtime.pdb
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.Helpers.resources.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\obj\Debug\WebApplication1.pdb
+H:\new repository\TestVSpull\WebApplication1\bin\WebApplication1.dll.config
+H:\new repository\TestVSpull\WebApplication1\bin\WebApplication1.dll
+H:\new repository\TestVSpull\WebApplication1\bin\WebApplication1.pdb
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\csc.exe
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\csc.exe.config
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\csc.rsp
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\csi.exe
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\csi.exe.config
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\csi.rsp
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.AppContext.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Console.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.IO.Compression.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.IO.Pipes.AccessControl.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.IO.Pipes.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.AccessControl.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Claims.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Security.Principal.Windows.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.ValueTuple.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\vbc.exe
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\vbc.exe.config
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\vbc.rsp
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\VBCSCompiler.exe
+H:\new repository\TestVSpull\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+H:\new repository\TestVSpull\WebApplication1\bin\Antlr3.Runtime.dll
+H:\new repository\TestVSpull\WebApplication1\bin\EntityFramework.dll
+H:\new repository\TestVSpull\WebApplication1\bin\EntityFramework.SqlServer.dll
+H:\new repository\TestVSpull\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\new repository\TestVSpull\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+H:\new repository\TestVSpull\WebApplication1\bin\Newtonsoft.Json.dll
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.Helpers.dll
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.Mvc.dll
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.Optimization.dll
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.Razor.dll
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.dll
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.Razor.dll
+H:\new repository\TestVSpull\WebApplication1\bin\WebGrease.dll
+H:\new repository\TestVSpull\WebApplication1\bin\EntityFramework.xml
+H:\new repository\TestVSpull\WebApplication1\bin\EntityFramework.SqlServer.xml
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.Helpers.xml
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.Mvc.xml
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.Optimization.xml
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.Razor.xml
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.xml
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+H:\new repository\TestVSpull\WebApplication1\bin\System.Web.WebPages.Razor.xml
+H:\new repository\TestVSpull\WebApplication1\bin\Newtonsoft.Json.xml
+H:\new repository\TestVSpull\WebApplication1\bin\Antlr3.Runtime.pdb
+H:\new repository\TestVSpull\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\new repository\TestVSpull\WebApplication1\bin\zh-Hant\EntityFramework.resources.dll
+H:\new repository\TestVSpull\WebApplication1\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+H:\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.Helpers.resources.dll
+H:\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.Mvc.resources.dll
+H:\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.Optimization.resources.dll
+H:\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.Razor.resources.dll
+H:\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.WebPages.resources.dll
+H:\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+H:\new repository\TestVSpull\WebApplication1\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+H:\new repository\TestVSpull\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+H:\new repository\TestVSpull\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+H:\new repository\TestVSpull\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+H:\new repository\TestVSpull\WebApplication1\obj\Debug\WebApplication1.dll
+H:\new repository\TestVSpull\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\xunit.abstractions.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\xunit.core.dll
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\xunit.abstractions.xml
+C:\Users\iii\Desktop\new repository\TestVSpull\WebApplication1\bin\xunit.core.xml

@@ -19,14 +19,24 @@ namespace WebApplication1.Controllers
             return View(list);
         }
 
+
+
+
+
         public ActionResult Create()
         {
-            return View();
+            if (Session["Member"] == null)
+            {
+                return View("Create", "_LayoutPage1");
+            }
+            //會員登入狀態
+            return View("Create");
         }
 
         [HttpGet]
         public ActionResult Create(int fUID)
         {
+            fUID = (Session["Member"] as t會員).fUID;
             var c = new t私廚
             {
                 fUID = fUID
@@ -37,46 +47,59 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult Create(t私廚 c)
         {
-            using (var db = new Database1Entities())
-            {
-                db.t私廚.Add(c);
-                db.SaveChanges();
-            }
+            if (ModelState.IsValid)
+                {
+                    db.t私廚.Add(c);
+                    db.SaveChanges();
 
-            var acc = db.t會員.FirstOrDefault(a => a.fUID == c.fUID);
-            if (acc != null)
-            {
-                acc.f權限 = 2; // 不顯示
-                db.SaveChanges();
+                int fUId = (Session["Member"] as t會員).fUID;
+                var acc = db.t會員.FirstOrDefault(m => m.fUID == fUId);
+                if (acc != null)
+                    {
+                        acc.f權限 = 2; // 不顯示
+                        db.SaveChanges();
+                    }
+
+                var chef = db.t私廚.Where(m => m.fUID == c.fUID).FirstOrDefault();
+                Session["Chef"] = chef;
+
+                return RedirectToAction("Details", "Account"); 
             }
-            return RedirectToAction("Details", "Account", new { fUID =c.fUID});
+                else { 
+                return View();
+                }
         }
 
-        public ActionResult Edit(int fCID)
+        public ActionResult Edit()
         {
-            var db = new Database1Entities();
-            var chef = db.t私廚.FirstOrDefault(c => c.fCID == fCID);
+            int fCId = (Session["Chef"] as t私廚).fCID;
+            var chef = db.t私廚.FirstOrDefault(c => c.fCID == fCId);
 
-            return View(chef);
+            return View("Edit", chef);
         }
 
         [HttpPost]
         public ActionResult Edit(t私廚 modify)
         {
-            var db = new Database1Entities();
+            int fCId = (Session["Chef"] as t私廚).fCID;
             var chef = db.t私廚.FirstOrDefault(c => c.fCID == modify.fCID);
 
             if (chef != null)
             {
-                chef.fCID = modify.fCID; // 
-                chef.fUID = modify.fUID; //
-                chef.f私廚簡介 = modify.f私廚簡介;
-                chef.f服務地區 = modify.f服務地區;
+                if (ModelState.IsValid)
+                {
+                    chef.f私廚簡介 = modify.f私廚簡介;
+                    chef.f服務地區 = modify.f服務地區;
 
-                db.SaveChanges();
+                    db.SaveChanges();
+                }
+                else
+                {
+                    return View();
+                }
             }
 
-            return RedirectToAction("List");
+            return RedirectToAction("Details", "Account");
         }
 
         public ActionResult Delete(t私廚 cc)

@@ -21,7 +21,6 @@ namespace WebApplication1
         public string f預定日期 { get; set; }
         public string f評價日期 { get; set; }
         public int f數量 { get; set; }
-        public int f總價 { get; set; }
         public int f狀態 { get; set; }
         public int f評級 { get; set; }
         public string f評價內容 { get; set; }

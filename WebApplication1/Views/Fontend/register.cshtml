@@ -4,6 +4,10 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
+@section Breadcumb {
+    @{ Html.RenderPartial("~/Views/Shared/_Breadcumb一般.cshtml"); }
+}
+
 <!-- ##### Register Start ##### -->
 <div class="contact-area section-padding-0-80">
     <div class="container">
@@ -49,7 +53,7 @@
 
 @section scripts {
     <script>
-        (function (window, $) {
+        {
             function checkpw() {
                 var pw1 = $('input[id=password1]').val();
                 var pw2 = $('input[id=password2]').val();
@@ -63,6 +67,6 @@
                 }
 
             }
-        })(window, $);
+        }
     </script>
 }
