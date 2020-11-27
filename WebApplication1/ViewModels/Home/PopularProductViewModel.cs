@@ -19,6 +19,7 @@ namespace WebApplication1.ViewModels.Home
         public int f項目評級 { get; set; }
         public string f風格 { get; set; }
         public string f服務種類 { get; set; }
+        public string f會員照片 { get; set; }
     }
     public class Lesson
     {
@@ -31,6 +32,7 @@ namespace WebApplication1.ViewModels.Home
         public int f項目評級 { get; set; }
         public string f風格 { get; set; }
         public string f服務種類 { get; set; }
+        public string f會員照片 { get; set; }
     }
     public class PopularProductViewModel
     {

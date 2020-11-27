@@ -18,11 +18,13 @@ namespace WebApplication1.Models.SearchResult
         public int f項目評級 { get; set; }
         public string f風格 { get; set; }
         public string f服務種類 { get; set; }
+        public string f會員照片 { get; set; }
+
     }
     
     public class CSearchResult
     {
-        public List<SearchProduct> 搜尋結果 { get; set; }      
+        public List<SearchProduct> 搜尋結果 { get; set; } = new List<SearchProduct>();
 
         public string 地區 { get; set; }
         public List<SelectListItem> f地區 { get; set; }
@@ -37,6 +39,7 @@ namespace WebApplication1.Models.SearchResult
 
         public string 風格 { get; set; }
         public List<SelectListItem> f風格 { get; set; }
+
 
         public string txtkeyword { get; set; }
 

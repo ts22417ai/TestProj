@@ -388,7 +388,6 @@
     <Content Include="Views\Order\chefInfo.cshtml" />
     <Content Include="Views\Fontend\index.cshtml" />
     <Content Include="Views\Fontend\login.cshtml" />
-    <Content Include="Views\SearchResult\SearchByCondition.cshtml" />
     <Content Include="Views\Schedule\List.cshtml" />
     <Content Include="Views\Shared\_LayoutPage1 - 複製.cshtml" />
     <Content Include="Views\Account\index.cshtml" />
@@ -406,6 +405,7 @@
     <Content Include="Views\Shared\_Breadcumb一般.cshtml" />
     <Content Include="Views\Order\evaluate.cshtml" />
     <Content Include="Views\SearchResult\SearchByKeyWord.cshtml" />
+    <Content Include="Views\SearchResult\SearchByCondition.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Test\Models\" />

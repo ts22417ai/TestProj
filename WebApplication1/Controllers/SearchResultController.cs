@@ -12,9 +12,9 @@ namespace WebApplication1.Controllers
     public class SearchResultController : Controller
     {
         // GET: SearchResult
-
-        private Database1Entities db = new Database1Entities();
-        public ActionResult SearchByCondition(PopularProductViewModel vm)
+    
+        
+        public ActionResult SearchByCondition(CSearchResult vm)
         {
             if (vm.風格 != null && vm.地區 != null && vm.服務種類 != null && vm.時段 != null && vm.f日期 != null)
             {
@@ -26,114 +26,95 @@ namespace WebApplication1.Controllers
 
 
                 List<SearchProduct> Productlist = new List<SearchProduct>();
-                Productlist = (new CSearchResultFactory()).GetCSearchResultsByCondition(k風格, k地區, k服務種類, k日期, k時段);          
+                Productlist = (new CSearchResultFactory()).GetCSearchResultsByCondition(k風格, k地區, k服務種類, k日期, k時段);
                 var list = new CSearchResult
                 {
-                    搜尋結果 = Productlist,  
+                    搜尋結果 = Productlist,
                     f日期 = k日期
                 };
                 //設定地區 SelectListItem
-                var 地區預設 = new List<SelectListItem>();
-                地區預設.Add(new SelectListItem { Text = "請選擇地區", Disabled = true, Selected = true });
-                地區預設.AddRange(
-                    CDictionary.地區.Select(x => new SelectListItem
-                    {
-                        Value = x.ToString(),
-                        Text = x
-                    }).ToArray()
-                );
+                list.f地區 = (new CSearchResultFactory()).Add地區SelectListItem();
+
                 //設定時段 SelectListItem
-                var 時段 = new List<SelectListItem>();
-                時段.AddRange(
-                    Enum.GetValues(typeof(e私廚可預訂_時段)).Cast<e私廚可預訂_時段>().Select(x => new SelectListItem
-                    {
-                        Text = x.ToString(),
-                        Value = x.GetHashCode().ToString()
-                    }));
+                list.f時段 = (new CSearchResultFactory()).Add時段SelectListItem();
 
                 //設定風格 SelectListItem
-                var 風格 = db.t風格.Select(x =>
-                new SelectListItem
-                {
-                    Text = x.f風格.ToString(),
-                    Value = x.f風格
-                }).ToList();
+                list.f風格 = (new CSearchResultFactory()).Add風格SelectListItem();
 
                 //設定服務種類 SelectListItem
-                var 服務種類 = db.t服務種類.Select(x =>
-                new SelectListItem
-                {
-                    Value = x.f服務種類.ToString(),
-                    Text = x.f服務種類
-                }).ToList();
+                list.f服務種類 = (new CSearchResultFactory()).Add服務種類SelectListItem();
 
-                list.f時段 = 時段;
-                list.f地區 = 地區預設;
-                list.f風格 = 風格;
-                list.f服務種類 = 服務種類;
-                return View(list);
+                return View("SearchByCondition", list);
             }
-            else
-                return RedirectToAction("Index", "Home");
-        }
+            else {
+                var list = new CSearchResult
+                {
 
-        public ActionResult SearchByKeyWord(PopularProductViewModel vm)
+                };
+
+                //設定地區 SelectListItem
+                list.f地區 = (new CSearchResultFactory()).Add地區SelectListItem();
+
+                //設定時段 SelectListItem
+                list.f時段 = (new CSearchResultFactory()).Add時段SelectListItem();
+
+                //設定風格 SelectListItem
+                list.f風格 = (new CSearchResultFactory()).Add風格SelectListItem();
+
+                //設定服務種類 SelectListItem
+                list.f服務種類 = (new CSearchResultFactory()).Add服務種類SelectListItem();
+
+                return View("SearchByCondition",list);
+            }
+        }
+      
+        public ActionResult SearchByKeyWord(CSearchResult vm)
         {
             string keyWord = vm.txtkeyword;
-            if (keyWord != null) { 
-            List<SearchProduct> Productlist = new List<SearchProduct>();
-            Productlist = (new CSearchResultFactory()).GetCSearchResultsByKeyWord(keyWord);
-            var list = new CSearchResult
+            if (keyWord != null)
             {
-                搜尋結果 = Productlist,  
-                txtkeyword = keyWord
-            };
-            //設定地區 SelectListItem
-            var 地區預設 = new List<SelectListItem>();
-            地區預設.Add(new SelectListItem { Text = "請選擇地區", Disabled = true, Selected = true });
-            地區預設.AddRange(
-                CDictionary.地區.Select(x => new SelectListItem
+                List<SearchProduct> Productlist = new List<SearchProduct>();
+                Productlist = (new CSearchResultFactory()).GetCSearchResultsByKeyWord(keyWord);
+                var list = new CSearchResult
                 {
-                    Value = x.ToString(),
-                    Text = x
-                }).ToArray()
-            );
-            //設定時段 SelectListItem
-            var 時段 = new List<SelectListItem>();
-            時段.AddRange(
-                Enum.GetValues(typeof(e私廚可預訂_時段)).Cast<e私廚可預訂_時段>().Select(x => new SelectListItem
-                {
-                    Text = x.ToString(),
-                    Value = x.GetHashCode().ToString()
-                }));
+                    搜尋結果 = Productlist,
+                    txtkeyword = keyWord
+                };
+                //設定地區 SelectListItem
+                list.f地區 = (new CSearchResultFactory()).Add地區SelectListItem();
 
-            //設定風格 SelectListItem
-            var 風格 = db.t風格.Select(x =>
-            new SelectListItem
-            {
-                Text = x.f風格.ToString(),
-                Value = x.f風格
-            }).ToList();
+                //設定時段 SelectListItem
+                list.f時段 = (new CSearchResultFactory()).Add時段SelectListItem();
 
-            //設定服務種類 SelectListItem
-            var 服務種類 = db.t服務種類.Select(x =>
-            new SelectListItem
-            {
-                Value = x.f服務種類.ToString(),
-                Text = x.f服務種類
-            }).ToList();
+                //設定風格 SelectListItem
+                list.f風格 = (new CSearchResultFactory()).Add風格SelectListItem();
 
-            list.f時段 = 時段;
-            list.f地區 = 地區預設;
-            list.f風格 = 風格;
-            list.f服務種類 = 服務種類;
-        
-            return View(list);
+                //設定服務種類 SelectListItem
+                list.f服務種類 = (new CSearchResultFactory()).Add服務種類SelectListItem();
+
+                return View("SearchByKeyWord", list);
             }
+
             else
             {
-                return RedirectToAction("Index","Home");
+                var list = new CSearchResult
+                {
+
+                };
+
+                //設定地區 SelectListItem
+                list.f地區 = (new CSearchResultFactory()).Add地區SelectListItem();
+
+                //設定時段 SelectListItem
+                list.f時段 = (new CSearchResultFactory()).Add時段SelectListItem();
+
+                //設定風格 SelectListItem
+                list.f風格 = (new CSearchResultFactory()).Add風格SelectListItem();
+
+                //設定服務種類 SelectListItem
+                list.f服務種類 = (new CSearchResultFactory()).Add服務種類SelectListItem();
+                return View("SearchByKeyWord", list);
             }
-        }     
+        }
     }
 }

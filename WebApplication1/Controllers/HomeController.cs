@@ -13,6 +13,7 @@ namespace WebApplication1.Controllers
     public class HomeController : Controller
     {
         private Database1Entities db = new Database1Entities();
+
         public ActionResult Index()
         {   //取得熱門品項及熱門課程       
             var list_p = (new CHomeFeaturesFactory()).GetPopularProduct();
@@ -24,44 +25,16 @@ namespace WebApplication1.Controllers
             };
 
             //設定地區 SelectListItem
-            var 地區預設 = new List<SelectListItem>();
-            地區預設.Add(new SelectListItem { Text = "請選擇地區", Disabled = true, Selected = true });
-            地區預設.AddRange(
-                CDictionary.地區.Select(x => new SelectListItem
-                {
-                    Value = x.ToString(),
-                    Text = x
-                }).ToArray()
-            );
+            list.f地區 = (new CSearchResultFactory()).Add地區SelectListItem();
 
             //設定時段 SelectListItem
-            var 時段 = new List<SelectListItem>();
-            時段.AddRange(
-                Enum.GetValues(typeof(e私廚可預訂_時段)).Cast<e私廚可預訂_時段>().Select(x => new SelectListItem
-                { Text = x.ToString(), 
-                  Value = x.GetHashCode().ToString() }));
-            
+            list.f時段 = (new CSearchResultFactory()).Add時段SelectListItem();
+
             //設定風格 SelectListItem
-            var 風格 = db.t風格.Select(x =>
-            new SelectListItem
-            {
-                Text = x.f風格.ToString(),
-                Value = x.f風格
-            }).ToList();
+            list.f風格 = (new CSearchResultFactory()).Add風格SelectListItem();
 
             //設定服務種類 SelectListItem
-            var 服務種類 = db.t服務種類.Select(x =>
-            new SelectListItem
-            {
-                Value=x.f服務種類.ToString(),
-                Text = x.f服務種類
-            }).ToList();
-
-
-            list.f時段 = 時段;
-            list.f地區 = 地區預設;
-            list.f風格 = 風格;
-            list.f服務種類 = 服務種類;
+            list.f服務種類 = (new CSearchResultFactory()).Add服務種類SelectListItem();
 
 
             return View(list);

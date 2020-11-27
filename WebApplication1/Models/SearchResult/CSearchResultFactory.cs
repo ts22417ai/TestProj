@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
+using WebApplication1.Models.Common;
 using WebApplication1.ViewModels.Home;
 
 namespace WebApplication1.Models.SearchResult
 {
+
     public class CSearchResultFactory
     {
+        private Database1Entities db = new Database1Entities();
+
         public List<SearchProduct> GetCSearchResultsByCondition(string 風格, string 地區, string 服務種類, string 日期, string 時段)
         {
-            string sSQL = "select p.fCID, p.f項目照片,p.f項目名稱, p.[f項目評級 ], p.f價格,u.f姓名 " +
-                "from (((((t販售項目 p inner join t私廚 c on p.fCID=c.fCID)" +
+            string sSQL = "select p.fCID, p.fPID, p.f項目照片, p.f項目名稱, p.[f項目評級 ], p.f價格,u.f姓名,u.f會員照片 " +
+                "from (((((t販售項目 p inner join t私廚 c on p.fCID=c.fCID) " +
                 "inner join t會員 u on u.fUID = c.fUID) " +
                 "inner join t私廚可預訂時間 as t on t.fCID = p.fCID) " +
                 "inner join t風格 as s on s.fSID = p.fSID)" +
@@ -37,12 +42,15 @@ namespace WebApplication1.Models.SearchResult
                 while (reader.Read())
                 {
                     SearchProduct R = new SearchProduct();
+
+                    R.fPID = (int)reader["fPID"];
                     R.fCID = (int)reader["fCID"];
                     R.f私廚姓名 = (string)reader["f姓名"];
                     R.f項目名稱 = (string)reader["f項目名稱"];
                     R.f項目照片 = (string)reader["f項目照片"];
                     R.f項目評級 = (int)reader["f項目評級 "];
                     R.f價格 = (int)reader["f價格"];
+                    R.f會員照片 = (string)reader["f會員照片"];
                     list.Add(R);
                 }
             });
@@ -51,10 +59,9 @@ namespace WebApplication1.Models.SearchResult
         }
         public List<SearchProduct> GetCSearchResultsByKeyWord(string keyWord)
         {
-            string sSQL = "select p.fCID, p.f項目照片,p.f項目名稱, p.[f項目評級 ], p.f價格,u.f姓名 " +
+            string sSQL = "select p.fCID, p.fPID, p.f項目照片,p.f項目名稱, p.[f項目評級 ], p.f價格,u.f姓名,u.f會員照片 " +
                 "from t販售項目 p inner join t私廚 c on p.fCID=c.fCID " +
                 "inner join t會員 as u on u.fUID = c.fUID " +
-                "inner join t私廚可預訂時間 as t on t.fCID = p.fCID " +
                 "inner join t風格 as s on s.fSID = p.fSID " +
                 "inner join t服務種類 as k on k.fKID = p.fKID " +
                 "where u.f姓名 like @姓名 or p.f項目名稱 like @項目名稱";
@@ -70,16 +77,71 @@ namespace WebApplication1.Models.SearchResult
                 while (reader.Read())
                 {
                     SearchProduct R = new SearchProduct();
+                    R.fPID = (int)reader["fPID"];
                     R.fCID = (int)reader["fCID"];
                     R.f私廚姓名 = (string)reader["f姓名"];
                     R.f項目名稱 = (string)reader["f項目名稱"];
                     R.f項目照片 = (string)reader["f項目照片"];
                     R.f項目評級 = (int)reader["f項目評級 "];
                     R.f價格 = (int)reader["f價格"];
+                    R.f會員照片 = (string)reader["f會員照片"];
                     list.Add(R);
                 }
             });
             return list;
+        }
+
+        public List<SelectListItem> Add地區SelectListItem()
+        {
+            var 地區預設 = new List<SelectListItem>();
+                地區預設.Add(new SelectListItem { Text = "請選擇地區", Disabled = true, Selected = true });
+                地區預設.AddRange(
+                    CDictionary.地區.Select(x => new SelectListItem
+                    {
+                        Value = x.ToString(),
+                        Text = x
+                    }).ToArray()
+                );
+            return 地區預設;
+        }
+
+        public List<SelectListItem> Add時段SelectListItem()
+        {
+            var 時段 = new List<SelectListItem>();
+            時段.Add(new SelectListItem { Text = "請選擇時段", Disabled = true, Selected = true });
+            時段.AddRange(
+                Enum.GetValues(typeof(e私廚可預訂_時段)).Cast<e私廚可預訂_時段>().Select(x => new SelectListItem
+                {
+                    Text = x.ToString(),
+                    Value = x.GetHashCode().ToString()
+                }));
+            return 時段;
+        }
+
+        public List<SelectListItem> Add風格SelectListItem()
+        {
+            var 風格 = new List<SelectListItem>();
+            風格.Add(new SelectListItem { Text = "請選擇風格", Disabled = true, Selected = true });
+            風格.AddRange(db.t風格.Select(x=>
+            new SelectListItem {
+                Text = x.f風格.ToString(),
+                Value = x.f風格
+            }).ToList());
+
+            return 風格;
+        }
+
+        public List<SelectListItem> Add服務種類SelectListItem()
+        {
+            var 服務種類 = new List<SelectListItem>();
+            服務種類.Add(new SelectListItem { Text = "請選擇服務種類", Disabled = true, Selected = true });
+            服務種類.AddRange(db.t風格.Select(x =>
+            new SelectListItem
+            {
+                Text = x.f風格.ToString(),
+                Value = x.f風格
+            }).ToList());
+            return 服務種類;
         }
     }
 }

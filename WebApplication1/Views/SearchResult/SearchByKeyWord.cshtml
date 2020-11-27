@@ -61,7 +61,9 @@
                     </div>
                 </div>
             }
-            <div class="searchfont mt-5">Or Enter Key Words！</div>
+
+            <div class="mt-3 mb-3 text-center"><span style="color: #525252; font-weight: bold;">OR</span></div>
+
             @using (Html.BeginForm(
                 "SearchByKeyWord",
                 "SearchResult",
@@ -75,7 +77,7 @@
                         {
                             htmlAttributes = new
                    {
-
+                        @id ="txt1",
                        @class = " form-control",
                        @placeholder = "請輸入商品名稱",
                        @style = "margin-bottom: 20px;"
@@ -87,7 +89,7 @@
                     </div>
                     <div class="col-lg-2">
                         <button type="submit" class="btn delicious-btn" data-toggle="modal"
-                                data-target="#modal1" style="width: 100%;">
+                                data-target="#modal1" style="width: 100%; " id="btn1">
                             Search
                         </button>
                     </div>
@@ -113,7 +115,9 @@
                                         <a href="#"><i class="fa fa-heart fa-2x" id="heart1"></i></a>
                                     </div>
                                 </div>
-                                <input type="text" value="@item.fCID"/>
+                                
+                                <input type="text" value="@item.fPID" />
+                                <input type="text" value="@item.fCID" />
                                 <div class="receipe-content">
                                     <table>
                                         <tr>
@@ -127,7 +131,7 @@
                                         <tr>
                                             <td class="table_td1 pl-4">
                                                 <img id="headimg" class="circle-img-style"
-                                                     src="/Content/img/james-img/chefhead.jpg">
+                                                     src="@item.f會員照片">
                                             </td>
                                             <td class="table_td2  pr-4">
                                                 <div>
@@ -360,6 +364,15 @@
                 $("#heartsuccess").show().delay(1000).hide(300);
             }
 
+        });
+
+        $('#btn1').click(function () {
+            if ($('#txt1').val() == '') {
+                $('#btn1').attr("disabled",true)
+            }
+        });
+        $('#txt1').focus(function () {
+            $('#btn1').attr("disabled", false)
         });
 
                     // <!-- Modal -->

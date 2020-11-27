@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col-12 col-lg-2 ">
                                     <input id="meeting" type="date" value="" class="dtpicker" name="f日期" style="padding-left: 12px;" />
-                                </div>
+                                </div> 
                                 <div class="col-12 col-lg-2">
                                     @Html.DropDownListFor(x => x.風格, Model.f風格, htmlAttributes: new { @class = "form-control" })
                                     @Html.ValidationMessageFor(x => x.風格, "", new { @class = "text-danger" })
@@ -66,8 +66,8 @@
                                 <div class="col-lg-10">
                                     @*輸入關鍵字搜尋*@
                                     @Html.EditorFor(model => model.txtkeyword,new{ htmlAttributes = new
-                               {
-
+                               { 
+                                   @id ="txt1",
                                    @class = " form-control",
                                    @placeholder = "請輸入商品名稱",
                                    @style = "margin-bottom: 20px;"
@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="col-lg-2">
                                     <button type="submit" class="btn delicious-btn" data-toggle="modal"
-                                            data-target="#modal1" style="width: 100%;">
+                                            data-target="#modal1" style="width: 100%;" id="btn1">
                                         Search
                                     </button>
                                 </div>
@@ -127,7 +127,7 @@
                                     <tr>
                                         <td class="table_td1 pl-4">
                                             <img id="headimg" class="circle-img-style"
-                                                 src="/Content/img/james-img/chefhead.jpg">
+                                                 src="@item.f會員照片">
                                         </td>
                                         <td class="table_td2  pr-4">
                                             <div>
@@ -244,6 +244,18 @@
             prevArrow: "<i class='fa fa-chevron-left prev' aria-hidden='true'></i>",
             nextArrow: "<i class='fa fa-chevron-right next' aria-hidden='true'></i>"
         });
+
+        $('#btn1').click(function () {
+            if ($('#txt1').val() == '') {
+                $('#btn1').attr("disabled", true)
+            }           
+            console.log(document.getElementById('btn1').attributes)
+        });
+
+        $('#txt1').focus(function () {
+            $('#btn1').attr("disabled", false)
+        });
+        
     </script>
     @Scripts.Render("~/bundles/jqueryval")
 }
